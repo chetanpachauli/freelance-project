@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFloatingSideNav();
   initStudioTimeline();
   init3DTiltCards();
+  initAudioVisualizer();
   initTextScramble();
 });
 
@@ -1141,30 +1142,72 @@ function initStudioTimeline() {
   updateTimeline();
 }
 
-// 16. 3D Card Perspective Tilt & Reflective Glare
+// 16. 3D Card Perspective Tilt & Reflective Glare (Mouse + Mobile Touch Responsive)
 function init3DTiltCards() {
   const cards = document.querySelectorAll('.card-3d-tilt');
   if (!cards.length) return;
 
   cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
+    function handleMove(clientX, clientY) {
       const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      const rotateX = ((y - centerY) / centerY) * -7;
-      const rotateY = ((x - centerX) / centerX) * 7;
+      const rotateX = ((y - centerY) / centerY) * -10;
+      const rotateY = ((x - centerX) / centerX) * 10;
 
-      card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+      card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.03, 1.03, 1.03)`;
       card.style.setProperty('--mouse-x', `${(x / rect.width) * 100}%`);
       card.style.setProperty('--mouse-y', `${(y / rect.height) * 100}%`);
+    }
+
+    function handleReset() {
+      card.style.transform = `perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+    }
+
+    card.addEventListener('mousemove', (e) => handleMove(e.clientX, e.clientY));
+    card.addEventListener('mouseleave', handleReset);
+
+    // Mobile touch interaction
+    card.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        handleMove(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+    card.addEventListener('touchend', handleReset);
+  });
+}
+
+// 18. Studio Innovation Lab - 48kHz Audio Visualizer Beat Controller
+function initAudioVisualizer() {
+  const beatBtn = document.getElementById('toggle-audio-beat-btn');
+  const beatIcon = document.getElementById('audio-beat-icon');
+  const beatLabel = document.getElementById('audio-beat-label');
+  const eqContainer = document.getElementById('equalizer-bars-container');
+
+  if (!beatBtn || !eqContainer) return;
+
+  let isPlaying = true;
+
+  beatBtn.addEventListener('click', () => {
+    isPlaying = !isPlaying;
+    const bars = eqContainer.querySelectorAll('.eq-wave-bar');
+    bars.forEach(bar => {
+      bar.style.animationPlayState = isPlaying ? 'running' : 'paused';
     });
 
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = `perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-    });
+    if (beatIcon) beatIcon.textContent = isPlaying ? '❚❚' : '▶';
+    if (beatLabel) beatLabel.textContent = isPlaying ? 'Pause Beat' : 'Play Beat';
+
+    if (isPlaying) {
+      beatBtn.classList.remove('bg-amber-500/20', 'text-amber-300', 'border-amber-500/40');
+      beatBtn.classList.add('bg-emerald-500/20', 'text-emerald-300', 'border-emerald-500/40');
+    } else {
+      beatBtn.classList.remove('bg-emerald-500/20', 'text-emerald-300', 'border-emerald-500/40');
+      beatBtn.classList.add('bg-amber-500/20', 'text-amber-300', 'border-amber-500/40');
+    }
   });
 }
 
