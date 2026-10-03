@@ -1,0 +1,2613 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Talk — High-Performance Video Editing For Brands & Creators</title>
+  <meta name="description" content="Turn your raw footage into high-retention content people want to watch. Professional video editing studio for brands, creators, and businesses." />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF6A00'><polygon points='5 3 19 12 5 21 5 3'/></svg>" />
+</head>
+<body class="bg-dark-950 text-slate-100 antialiased selection:bg-brand-orange selection:text-black relative">
+
+  <!-- Ambient Golden & Amber Background Spotlights -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[850px] h-[500px] bg-brand-orange/10 rounded-full blur-[180px] pointer-events-none -z-10 ambient-glow-orb"></div>
+  <div class="fixed top-1/3 -left-32 w-[600px] h-[600px] bg-brand-amber/5 rounded-full blur-[160px] pointer-events-none -z-10 ambient-glow-orb"></div>
+  <div class="fixed bottom-1/4 -right-32 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+  <!-- Ambient Cursor Spotlight Glow -->
+  <div id="ambient-mouse-glow" class="fixed inset-0 pointer-events-none z-30 transition-opacity duration-700 opacity-60"></div>
+
+  <!-- NAVIGATION BAR (The Wealth Portal Style) -->
+  <header class="sticky top-0 z-50 bg-dark-950/85 backdrop-blur-xl border-b border-white/5 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-amber to-brand-orange flex items-center justify-center shadow-lg shadow-brand-orange/30 group-hover:scale-105 transition-transform">
+          <svg class="w-5 h-5 text-black fill-current translate-x-0.5" viewBox="0 0 24 24">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg font-black tracking-tight text-white leading-none">MARKETING TALK</span>
+          <span class="text-[10px] font-mono tracking-widest text-brand-amber uppercase mt-0.5">Post-Production Studio</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-300">
+        <a href="#work" class="hover:text-brand-amber transition-colors">Portfolio</a>
+        <a href="#formats" class="hover:text-brand-amber transition-colors">Formats</a>
+        <a href="#proof" class="hover:text-brand-amber transition-colors">Results</a>
+        <a href="#comparison" class="hover:text-brand-amber transition-colors">Why Us</a>
+        <a href="#process" class="hover:text-brand-amber transition-colors">Workflow</a>
+        <a href="#pricing" class="hover:text-brand-amber transition-colors">Pricing</a>
+        <a href="#faqs" class="hover:text-brand-amber transition-colors">FAQs</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <!-- 48kHz Audio Equalizer Status Pill -->
+        <div class="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-slate-300">
+          <span class="flex items-end gap-0.5 h-3 w-3">
+            <span class="w-0.5 h-full bg-brand-orange animate-pulse"></span>
+            <span class="w-0.5 h-2/3 bg-brand-amber animate-pulse"></span>
+            <span class="w-0.5 h-4/5 bg-brand-orange animate-pulse"></span>
+          </span>
+          <span class="text-white font-bold">48kHz Mastered</span>
+        </div>
+
+        <a href="#contact" class="btn-wealth px-7 py-3 text-xs uppercase tracking-wider font-extrabold shadow-lg">
+          Get A Quote
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-300 hover:text-white" aria-label="Toggle navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-dark-950/95 backdrop-blur-2xl flex flex-col p-6 translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-brand-orange flex items-center justify-center text-black font-black">MT</div>
+        <span class="font-extrabold text-white text-base">MARKETING TALK</span>
+      </div>
+      <button id="mobile-menu-close" class="p-2 text-slate-400 hover:text-white" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <div class="flex flex-col gap-6 py-8 text-base font-bold text-slate-200 uppercase tracking-wider">
+      <a href="#work" class="mobile-nav-link hover:text-brand-amber">Portfolio</a>
+      <a href="#formats" class="mobile-nav-link hover:text-brand-amber">Formats & Services</a>
+      <a href="#proof" class="mobile-nav-link hover:text-brand-amber">Client Results</a>
+      <a href="#comparison" class="mobile-nav-link hover:text-brand-amber">Why Choose Us</a>
+      <a href="#process" class="mobile-nav-link hover:text-brand-amber">How It Works</a>
+      <a href="#pricing" class="mobile-nav-link hover:text-brand-amber">Packages & Pricing</a>
+      <a href="#faqs" class="mobile-nav-link hover:text-brand-amber">FAQs</a>
+    </div>
+    <div class="mt-auto pt-6 border-t border-slate-800">
+      <a href="#contact" class="mobile-nav-link btn-wealth w-full py-4 text-center block text-xs font-black uppercase tracking-wider">
+        Get A Free Video Editing Quote →
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 01: HERO SECTION -->
+    <section id="hero" class="relative pt-12 pb-24 md:pt-16 md:pb-36 overflow-hidden text-center">
+      <!-- Three.js 3D Background Canvas -->
+      <canvas id="three-hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-60"></canvas>
+      
+      <div class="relative z-10">
+        <div class="inline-block mb-8 reveal-on-scroll stagger-1">
+        <a href="#contact" class="btn-wealth px-8 py-3 text-xs uppercase tracking-widest font-black shadow-2xl animate-gentle-bounce">
+          Join Client Roster • Get Quote
+        </a>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 mb-6 reveal-on-scroll stagger-2">
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08]">
+          Turn Your Raw Footage Into Content <br class="hidden sm:inline" />
+          <span class="text-gradient-gold text-shimmer">People Want to Watch.</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-xl font-normal max-w-2xl mx-auto mt-6 leading-relaxed">
+          Professional video editing for brands, creators and businesses — from short-form reels and social media content to ads, YouTube videos and more.
+        </p>
+      </div>
+
+      <!-- Hero Video Showcase Container -->
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 relative mt-12 mb-10 reveal-on-scroll stagger-3">
+        <div class="relative wealth-card p-3 sm:p-5 border-white/10 shadow-2xl shadow-orange-950/40 bg-dark-900 group border-rotating-glow">
+          <div class="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-black flex items-center justify-center">
+            
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600&auto=format&fit=crop&q=80" alt="Showcase" class="w-full h-full object-cover opacity-85 group-hover:scale-102 transition-transform duration-700" loading="eager" />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-dark-950/20 to-transparent"></div>
+
+            <button onclick="openVideoModal(1)" class="wealth-play-btn z-10" aria-label="Play 2026 Showreel">
+              <svg class="w-9 h-9 fill-current translate-x-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </button>
+
+            <div class="absolute top-4 left-4 z-10 flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[11px] font-bold text-brand-amber border border-brand-amber/30 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+                2026 Production Showreel
+              </span>
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between text-left text-xs text-white bg-dark-950/80 backdrop-blur-md p-3.5 rounded-xl border border-white/10">
+              <div>
+                <span class="font-bold block text-sm">4K Master Cuts • Retention Engineered</span>
+                <span class="text-slate-400 text-xs">Used by creators, founders and agencies worldwide</span>
+              </div>
+              <button onclick="openVideoModal(1)" class="btn-wealth px-4 py-2 text-[10px] uppercase font-bold tracking-wider">
+                Watch Reel
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- 2-COLUMN BENEFIT CHECKLIST (Wealth Portal Exact Layout 00:01 in video) -->
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 reveal-on-scroll stagger-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+          
+          <div class="space-y-3.5 bg-dark-900/60 p-5 rounded-2xl border border-white/5">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <span class="text-xs sm:text-sm text-slate-200 font-medium">Master a high-retention hook from raw mobile footage</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <span class="text-xs sm:text-sm text-slate-200 font-medium">Follow proven editing frameworks engineered for viral algorithms</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <span class="text-xs sm:text-sm text-slate-200 font-medium">Dedicated senior video editors assigned directly to your brand</span>
+            </div>
+          </div>
+
+          <div class="space-y-3.5 bg-dark-900/60 p-5 rounded-2xl border border-white/5">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <span class="text-xs sm:text-sm text-slate-200 font-medium">Stay ahead of content fatigue with dynamic pacing and sound design</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <span class="text-xs sm:text-sm text-slate-200 font-medium">Fast 24-48h turnaround time — never miss a publishing date</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <span class="text-xs sm:text-sm text-slate-200 font-medium">Zero editing headaches, no complex software learning curve</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 px-4 reveal-on-scroll stagger-5">
+        <a href="#contact" class="btn-wealth px-9 py-4 text-xs uppercase tracking-wider font-black shadow-2xl animate-gentle-bounce">
+          Get A Free Video Editing Quote →
+        </a>
+        <a href="#work" class="btn-wealth-secondary px-8 py-4 text-xs uppercase tracking-wider font-bold">
+          View Our Work ↓
+        </a>
+      </div>
+      </div>
+
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="py-7 bg-dark-900/80 border-y border-white/5 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 mb-6 text-center">
+        <!-- Live Stat Counter Bar -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-6">
+          <div class="p-3.5 rounded-2xl bg-dark-950/80 border border-white/5 text-center shadow-lg reveal-on-scroll stagger-1">
+            <span class="text-2xl sm:text-3xl font-black text-white font-mono block" data-target-counter="480" data-prefix="+" data-suffix="M">+480M</span>
+            <span class="text-[10px] text-slate-400 font-mono uppercase block mt-1">Views Generated</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-dark-950/80 border border-white/5 text-center shadow-lg reveal-on-scroll stagger-2">
+            <span class="text-2xl sm:text-3xl font-black text-brand-amber font-mono block" data-target-counter="1850" data-suffix="+">1,850+</span>
+            <span class="text-[10px] text-slate-400 font-mono uppercase block mt-1">Videos Produced</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-dark-950/80 border border-white/5 text-center shadow-lg reveal-on-scroll stagger-3">
+            <span class="text-2xl sm:text-3xl font-black text-white font-mono block">24-48h</span>
+            <span class="text-[10px] text-slate-400 font-mono uppercase block mt-1">Avg Turnaround</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-dark-950/80 border border-white/5 text-center shadow-lg reveal-on-scroll stagger-4">
+            <span class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono block">99.4%</span>
+            <span class="text-[10px] text-slate-400 font-mono uppercase block mt-1">On-Time Delivery</span>
+          </div>
+        </div>
+
+        <p class="text-[11px] uppercase font-mono tracking-widest text-slate-400">
+          Trusted by Content-Heavy Businesses Across Multiple Industries
+        </p>
+      </div>
+
+      <div class="relative w-full overflow-hidden whitespace-nowrap">
+        <div class="inline-flex gap-8 animate-marquee">
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🏢 Real Estate</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">📈 Finance & Wealth</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🩺 Healthcare & Clinics</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🎓 Education & Courses</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🛍️ E-commerce Brands</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🎙️ Personal Brands & CEOs</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🎬 Content Creators</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">📍 Local Businesses</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🏢 Real Estate</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">📈 Finance & Wealth</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🩺 Healthcare & Clinics</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🎓 Education & Courses</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🛍️ E-commerce Brands</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🎙️ Personal Brands & CEOs</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">🎬 Content Creators</span>
+          <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">📍 Local Businesses</span>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION 03: PROBLEM SECTION (Wealth Portal Framing 00:03 - 00:04) -->
+    <section id="problem" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="max-w-3xl mx-auto mb-16 reveal-on-scroll">
+          <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-3 block">For Brands & Creators Striving To Win Attention</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-6">
+            Your Content Doesn't Need More Footage. <br />
+            <span class="text-gradient-gold">It Needs Better Editing.</span>
+          </h2>
+          <p class="text-base sm:text-lg text-slate-400">
+            You already have the footage. The problem is turning it into content that looks professional, keeps attention and fits your brand.
+          </p>
+        </div>
+
+        <!-- Continuous Sliding Problem Cards (Left to Right) -->
+        <div class="relative w-full overflow-hidden py-4 reveal-on-scroll stagger-1">
+          <!-- Ambient gradient edge masks -->
+          <div class="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-36 bg-gradient-to-r from-dark-950 via-dark-950/80 to-transparent z-10"></div>
+          <div class="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-36 bg-gradient-to-l from-dark-950 via-dark-950/80 to-transparent z-10"></div>
+
+          <div class="animate-slide-right gap-6">
+          <div class="wealth-card p-7 w-[320px] sm:w-[360px] flex-shrink-0 relative text-left bg-dark-900 border border-white/10 hover:border-brand-orange/40 transition-all">
+            <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-red-500/25 to-red-950/40 border border-red-500/50 text-red-400 flex items-center justify-center mb-5 shadow-lg shadow-red-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Too Much Editing Work</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Spending 6+ hours tweaking timeline cuts, searching audio clips, and fixing subtitles when you should be closing clients.
+            </p>
+          </div>
+
+          <div class="wealth-card p-7 w-[320px] sm:w-[360px] flex-shrink-0 relative text-left bg-dark-900 border border-white/10 hover:border-brand-orange/40 transition-all">
+            <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500/25 to-amber-950/40 border border-amber-500/50 text-brand-amber flex items-center justify-center mb-5 shadow-lg shadow-amber-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 18 23 18 23 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Inconsistent Content</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Posting 5 videos one week and zero the next. Algorithms penalize inconsistency, stalling your brand reach and audience growth.
+            </p>
+          </div>
+
+          <div class="wealth-card p-7 w-[320px] sm:w-[360px] flex-shrink-0 relative text-left bg-dark-900 border border-white/10 hover:border-brand-orange/40 transition-all">
+            <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500/25 to-purple-950/40 border border-purple-500/50 text-purple-300 flex items-center justify-center mb-5 shadow-lg shadow-purple-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Low Retention & Drop-off</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Weak hooks, monotone pacing, and boring visuals cause viewers to scroll away in the first 3 seconds of playback.
+            </p>
+          </div>
+
+          <div class="wealth-card p-7 w-[320px] sm:w-[360px] flex-shrink-0 relative text-left bg-dark-900 border border-white/10 hover:border-brand-orange/40 transition-all">
+            <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500/25 to-orange-950/40 border border-brand-orange/50 text-brand-orange flex items-center justify-center mb-5 shadow-lg shadow-orange-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke-width="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4" stroke-width="2"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Content Bottleneck</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Gigabytes of recorded camera roll footage sitting idle on hard drives because you don't have a reliable post-production team.
+            </p>
+          </div>
+
+          <!-- Duplicate 4 cards for seamless loop -->
+          <div class="wealth-card p-7 w-[320px] sm:w-[360px] flex-shrink-0 relative text-left bg-dark-900 border border-white/10 hover:border-brand-orange/40 transition-all">
+            <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-red-500/25 to-red-950/40 border border-red-500/50 text-red-400 flex items-center justify-center mb-5 shadow-lg shadow-red-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Too Much Editing Work</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Spending 6+ hours tweaking timeline cuts, searching audio clips, and fixing subtitles when you should be closing clients.
+            </p>
+          </div>
+
+          <div class="wealth-card p-7 w-[320px] sm:w-[360px] flex-shrink-0 relative text-left bg-dark-900 border border-white/10 hover:border-brand-orange/40 transition-all">
+            <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500/25 to-amber-950/40 border border-amber-500/50 text-brand-amber flex items-center justify-center mb-5 shadow-lg shadow-amber-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 18 23 18 23 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Inconsistent Content</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Posting 5 videos one week and zero the next. Algorithms penalize inconsistency, stalling your brand reach and audience growth.
+            </p>
+          </div>
+
+          <div class="wealth-card p-7 w-[320px] sm:w-[360px] flex-shrink-0 relative text-left bg-dark-900 border border-white/10 hover:border-brand-orange/40 transition-all">
+            <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500/25 to-purple-950/40 border border-purple-500/50 text-purple-300 flex items-center justify-center mb-5 shadow-lg shadow-purple-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Low Retention & Drop-off</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Weak hooks, monotone pacing, and boring visuals cause viewers to scroll away in the first 3 seconds of playback.
+            </p>
+          </div>
+
+          <div class="wealth-card p-7 w-[320px] sm:w-[360px] flex-shrink-0 relative text-left bg-dark-900 border border-white/10 hover:border-brand-orange/40 transition-all">
+            <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500/25 to-orange-950/40 border border-brand-orange/50 text-brand-orange flex items-center justify-center mb-5 shadow-lg shadow-orange-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke-width="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4" stroke-width="2"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Content Bottleneck</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Gigabytes of recorded camera roll footage sitting idle on hard drives because you don't have a reliable post-production team.
+            </p>
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: NETFLIX-STYLE "CONTINUE WATCHING" VIDEO SLIDER (Wealth Portal Exact Feature 00:05 - 00:09) -->
+    <section class="py-20 bg-dark-900/60 border-y border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7">
+            <div class="wealth-card p-5 sm:p-7 border-white/10 bg-dark-950">
+              
+              <div class="flex items-center justify-between pb-4 mb-5 border-b border-white/5">
+                <div>
+                  <span class="text-[11px] font-mono tracking-widest text-brand-orange uppercase block">Master Portfolio Vault</span>
+                  <span class="text-sm font-bold text-white uppercase tracking-wider">CONTINUE WATCHING • RECENT EDITS</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button id="carousel-prev" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center text-xs transition-colors">◀</button>
+                  <button id="carousel-next" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center text-xs transition-colors">▶</button>
+                </div>
+              </div>
+
+                            <!-- Continuous Auto-Sliding Video Track (Left to Right) -->
+              <div class="relative w-full overflow-hidden">
+                <div class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-dark-950 to-transparent z-10"></div>
+                <div class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-dark-950 to-transparent z-10"></div>
+
+                <div id="video-carousel-track" class="animate-carousel-slide gap-4">
+                <div onclick="openVideoModal(1)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&auto=format&fit=crop&q=80" alt="Penthouse Walkthrough" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-3/4"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Luxury Penthouse Walkthrough</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Real Estate • 420K Views</span>
+                </div>
+
+                <div onclick="openVideoModal(2)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=80" alt="Founder Breakdown" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-1/2"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">CEO Personal Brand Authority Reel</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Personal Brand • 3.2x Engagement</span>
+                </div>
+
+                <div onclick="openVideoModal(3)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop&q=80" alt="Finance Explainer" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-5/6"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Algorithmic Trading In 60 Seconds</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Finance • 18% Conversion</span>
+                </div>
+
+                <div onclick="openVideoModal(4)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=80" alt="Ecom UGC Ad" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-2/3"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">DTC Viral Skincare Meta Ad Hook</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">E-commerce • 4.1x ROAS</span>
+                </div>
+                <div onclick="openVideoModal(1)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&auto=format&fit=crop&q=80" alt="Penthouse Walkthrough" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-3/4"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Luxury Penthouse Walkthrough</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Real Estate • 420K Views</span>
+                </div>
+
+                <div onclick="openVideoModal(2)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=80" alt="Founder Breakdown" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-1/2"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">CEO Personal Brand Authority Reel</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Personal Brand • 3.2x Engagement</span>
+                </div>
+
+                <div onclick="openVideoModal(3)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop&q=80" alt="Finance Explainer" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-5/6"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Algorithmic Trading In 60 Seconds</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Finance • 18% Conversion</span>
+                </div>
+
+                <div onclick="openVideoModal(4)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=80" alt="Ecom UGC Ad" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-2/3"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">DTC Viral Skincare Meta Ad Hook</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">E-commerce • 4.1x ROAS</span>
+                </div>
+                </div>
+              </div></div>
+
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-2 block">Insights To Accelerate Your Success</span>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+              Real Strategies. Clear Execution.
+            </h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Learn directly from our post-production frameworks. We engineer every cut with sound design, kinetic text tracking, and psychological retention triggers that compel viewers to watch through to the CTA.
+            </p>
+            <div class="flex items-center gap-4">
+              <a href="#contact" class="btn-wealth px-7 py-3 text-xs uppercase tracking-wider font-extrabold">
+                Get Your Brand Cut →
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 04: WHAT WE EDIT (Content Formats Grid) -->
+    <section id="formats" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal-on-scroll">
+          <div>
+            <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-2 block">Our Capabilities</span>
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+              One Editing Team. <br />
+              <span class="text-gradient-gold">Multiple Content Formats.</span>
+            </h2>
+          </div>
+          <p class="text-slate-400 text-sm max-w-md mt-4 md:mt-0">
+            From vertical short-form reels to horizontal authority master videos, our senior editors adapt to your exact specifications.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Format 01: Short-Form Videos -->
+          <div class="wealth-card format-card p-6 flex flex-col justify-between group reveal-on-scroll stagger-1" data-format-card="0">
+            <div class="side-laser-beam"></div>
+            <div>
+              <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500/25 to-orange-600/15 border border-amber-500/40 text-brand-orange mb-4 shadow-lg shadow-amber-500/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3" stroke-width="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5" stroke-linecap="round"/><polygon points="10 8 15 11 10 14 10 8" fill="currentColor" stroke="none"/></svg>
+              </div>
+              <span class="text-[10px] font-mono text-brand-amber uppercase tracking-widest block mb-2">Vertical 9:16</span>
+              <h3 class="text-base font-bold text-white mb-2">Short-Form Videos</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Engineered for high watch time with dynamic captions, sound effects, and kinetic zoom transitions.</p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+              <span>IG & TikTok</span>
+              <span class="text-brand-orange font-bold">Ultra Cut</span>
+            </div>
+          </div>
+
+          <!-- Format 02: Instagram Reels -->
+          <div class="wealth-card format-card p-6 flex flex-col justify-between group reveal-on-scroll stagger-2" data-format-card="1">
+            <div class="side-laser-beam"></div>
+            <div>
+              <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500/25 to-rose-600/15 border border-pink-500/40 text-pink-400 mb-4 shadow-lg shadow-pink-500/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              </div>
+              <span class="text-[10px] font-mono text-brand-amber uppercase tracking-widest block mb-2">High Retention</span>
+              <h3 class="text-base font-bold text-white mb-2">Instagram Reels</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Aesthetic pacing, trending audio sync, and brand-tailored color grading that converts passive scrollers.</p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+              <span>Viral Growth</span>
+              <span class="text-brand-orange font-bold">Hook Pacing</span>
+            </div>
+          </div>
+
+          <!-- Format 03: YouTube Shorts -->
+          <div class="wealth-card format-card p-6 flex flex-col justify-between group reveal-on-scroll stagger-3" data-format-card="2">
+            <div class="side-laser-beam"></div>
+            <div>
+              <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-red-500/25 to-orange-600/15 border border-red-500/40 text-red-400 mb-4 shadow-lg shadow-red-500/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke-width="2" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="text-[10px] font-mono text-brand-amber uppercase tracking-widest block mb-2">Sub Funnel</span>
+              <h3 class="text-base font-bold text-white mb-2">YouTube Shorts</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Aggressive 1.5s hook cuts and clean visual storytelling that funnels subscribers to your channel.</p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+              <span>Audience Pull</span>
+              <span class="text-brand-orange font-bold">Retention</span>
+            </div>
+          </div>
+
+          <!-- Format 04: YouTube Videos (Highlighted initially as in Screenshot 1) -->
+          <div class="wealth-card format-card is-active p-6 flex flex-col justify-between group reveal-on-scroll stagger-4" data-format-card="3">
+            <div class="side-laser-beam"></div>
+            <div>
+              <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500/25 to-teal-600/15 border border-emerald-500/40 text-emerald-400 mb-4 shadow-lg shadow-emerald-500/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke-width="2"/><line x1="8" y1="21" x2="16" y2="21" stroke-width="2"/><line x1="12" y1="17" x2="12" y2="21" stroke-width="2"/><polygon points="10 7 15 10 10 13 10 7" fill="currentColor" stroke="none"/></svg>
+              </div>
+              <span class="text-[10px] font-mono text-brand-amber uppercase tracking-widest block mb-2">Long-Form 16:9</span>
+              <h3 class="text-base font-bold text-white mb-2">YouTube Videos</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Documentary-style B-roll layering, motion graphics, audio mastering, and chapter structuring.</p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+              <span>Authority Content</span>
+              <span class="text-brand-orange font-bold">1080p / 4K</span>
+            </div>
+          </div>
+
+          <!-- Format 05: Social Media Content -->
+          <div class="wealth-card format-card p-6 flex flex-col justify-between group reveal-on-scroll stagger-5" data-format-card="4">
+            <div class="side-laser-beam"></div>
+            <div>
+              <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500/25 to-indigo-600/15 border border-blue-500/40 text-blue-400 mb-4 shadow-lg shadow-blue-500/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3" stroke-width="2"/><circle cx="6" cy="12" r="3" stroke-width="2"/><circle cx="18" cy="19" r="3" stroke-width="2"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke-width="2"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke-width="2"/></svg>
+              </div>
+              <span class="text-[10px] font-mono text-brand-amber uppercase tracking-widest block mb-2">Omnichannel</span>
+              <h3 class="text-base font-bold text-white mb-2">Social Media Content</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Multi-platform batch editing with customized aspect ratios for LinkedIn, X (Twitter), and Facebook.</p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+              <span>Multi-Platform</span>
+              <span class="text-brand-orange font-bold">Batch Export</span>
+            </div>
+          </div>
+
+          <!-- Format 06: Paid Ads (Meta & TikTok) -->
+          <div class="wealth-card format-card p-6 flex flex-col justify-between group reveal-on-scroll stagger-6" data-format-card="5">
+            <div class="side-laser-beam"></div>
+            <div>
+              <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-yellow-500/25 to-amber-600/15 border border-yellow-500/40 text-yellow-400 mb-4 shadow-lg shadow-yellow-500/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><circle cx="12" cy="12" r="6" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="currentColor"/><line x1="12" y1="2" x2="12" y2="4" stroke-width="2"/><line x1="12" y1="20" x2="12" y2="22" stroke-width="2"/><line x1="2" y1="12" x2="4" y2="12" stroke-width="2"/><line x1="20" y1="12" x2="22" y2="12" stroke-width="2"/></svg>
+              </div>
+              <span class="text-[10px] font-mono text-brand-amber uppercase tracking-widest block mb-2">Direct Response</span>
+              <h3 class="text-base font-bold text-white mb-2">Paid Ads (Meta & TikTok)</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Direct response creative frameworks with punchy CTA overlays designed specifically to lower CPA.</p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+              <span>ROAS Focused</span>
+              <span class="text-brand-orange font-bold">High ROAS</span>
+            </div>
+          </div>
+
+          <!-- Format 07: Personal Branding Videos -->
+          <div class="wealth-card format-card p-6 flex flex-col justify-between group" data-format-card="6">
+            <div class="side-laser-beam"></div>
+            <div>
+              <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500/25 to-fuchsia-600/15 border border-purple-500/40 text-purple-300 mb-4 shadow-lg shadow-purple-500/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" stroke-width="2"/><path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke-width="2"/><line x1="12" y1="19" x2="12" y2="23" stroke-width="2"/><line x1="8" y1="23" x2="16" y2="23" stroke-width="2"/></svg>
+              </div>
+              <span class="text-[10px] font-mono text-brand-amber uppercase tracking-widest block mb-2">Thought Leadership</span>
+              <h3 class="text-base font-bold text-white mb-2">Personal Branding Videos</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Polished talking-head edits for founders, consultants, and executives that build immediate trust.</p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+              <span>Founder Presence</span>
+              <span class="text-brand-orange font-bold">Clean Polish</span>
+            </div>
+          </div>
+
+          <!-- Format 08: Real Estate Videos -->
+          <div class="wealth-card format-card p-6 flex flex-col justify-between group" data-format-card="7">
+            <div class="side-laser-beam"></div>
+            <div>
+              <div class="icon-badge-3d w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500/25 to-blue-600/15 border border-cyan-500/40 text-cyan-300 mb-4 shadow-lg shadow-cyan-500/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke-width="2"/><polyline points="9 22 9 12 15 12 15 22" stroke-width="2"/></svg>
+              </div>
+              <span class="text-[10px] font-mono text-brand-amber uppercase tracking-widest block mb-2">Luxury Showcase</span>
+              <h3 class="text-base font-bold text-white mb-2">Real Estate Videos</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Cinematic property walkthroughs, drone footage integration, 3D text tracking, and mood grading.</p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+              <span>Property Tour</span>
+              <span class="text-brand-orange font-bold">Luxury Grade</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- SECTION 05: PORTFOLIO SHOWCASE (Interactive Grid & Filters) -->
+    <section id="work" class="py-24 bg-dark-900/60 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll">
+          <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-3 block">Selected Works</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+            Don't Take Our Word For It. <br />
+            <span class="text-gradient-gold">Watch the Work.</span>
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Click on any video to launch the playback player. Experience our pacing, audio mastering, and typography.
+          </p>
+        </div>
+
+        <!-- Filter Tabs & Motion Mode Switcher -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 reveal-on-scroll stagger-1">
+          <!-- Filter Tabs (Pill Style) -->
+          <div class="flex items-center gap-2 overflow-x-auto pb-2 max-w-full no-scrollbar">
+            <button data-filter="all" class="portfolio-tab px-5 py-2 rounded-full text-xs font-bold transition-all bg-brand-orange text-black shadow-lg">
+              All
+            </button>
+            <button data-filter="real-estate" class="portfolio-tab px-5 py-2 rounded-full text-xs font-semibold transition-all bg-dark-850 text-slate-300 hover:text-white border border-white/5">
+              Real Estate
+            </button>
+            <button data-filter="personal-brand" class="portfolio-tab px-5 py-2 rounded-full text-xs font-semibold transition-all bg-dark-850 text-slate-300 hover:text-white border border-white/5">
+              Personal Brand
+            </button>
+            <button data-filter="finance" class="portfolio-tab px-5 py-2 rounded-full text-xs font-semibold transition-all bg-dark-850 text-slate-300 hover:text-white border border-white/5">
+              Finance
+            </button>
+            <button data-filter="healthcare" class="portfolio-tab px-5 py-2 rounded-full text-xs font-semibold transition-all bg-dark-850 text-slate-300 hover:text-white border border-white/5">
+              Healthcare
+            </button>
+            <button data-filter="education" class="portfolio-tab px-5 py-2 rounded-full text-xs font-semibold transition-all bg-dark-850 text-slate-300 hover:text-white border border-white/5">
+              Education
+            </button>
+            <button data-filter="ecommerce" class="portfolio-tab px-5 py-2 rounded-full text-xs font-semibold transition-all bg-dark-850 text-slate-300 hover:text-white border border-white/5">
+              E-commerce
+            </button>
+          </div>
+
+          <!-- Motion Mode Switcher: Up/Down Wall vs Left/Right Stream -->
+          <div class="inline-flex items-center p-1 rounded-full bg-dark-950 border border-white/10 text-xs shadow-inner">
+            <button id="portfolio-mode-wall" class="px-3.5 py-1.5 rounded-full font-bold bg-brand-orange text-black transition-all flex items-center gap-1.5">
+              <span>↕</span> Up & Down Wall
+            </button>
+            <button id="portfolio-mode-stream" class="px-3.5 py-1.5 rounded-full font-semibold text-slate-400 hover:text-white transition-all flex items-center gap-1.5">
+              <span>↔</span> Left & Right Flow
+            </button>
+          </div>
+        </div>
+
+        <!-- Continuous Moving Video Showcase (Wealth Portal Style) -->
+        <div class="relative h-[680px] overflow-hidden rounded-2xl bg-dark-950/40 border border-white/5 p-4 sm:p-6 my-2 reveal-on-scroll stagger-2">
+          <!-- Top & Bottom Gradient Masks for Seamless Entry/Exit -->
+          <div class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0e] via-[#0a0a0e]/85 to-transparent z-20"></div>
+          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0e] via-[#0a0a0e]/85 to-transparent z-20"></div>
+
+          <!-- Container for Dynamic Motion Wall / Flow -->
+          <div id="portfolio-grid" class="h-full"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: DISCORD / SLACK WORKSPACE CHAT MOCKUP (Wealth Portal Exact Feature 00:19 - 00:22) -->
+    <section class="py-24 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Discord / Slack Workspace UI (The Wealth Portal Style with Live Typing & Send Animation) -->
+          <div class="lg:col-span-8">
+            <div class="discord-ui shadow-2xl border border-white/10 bg-[#0c0d12] rounded-2xl overflow-hidden flex flex-col md:flex-row h-[560px]">
+              
+              <!-- Left Sidebar: Channels & Navigation (Matching media_1790958197401.png) -->
+              <div class="hidden sm:flex flex-col w-52 bg-[#090a0e] border-r border-white/5 p-4 select-none flex-shrink-0">
+                <!-- Branding Header -->
+                <div class="flex items-center gap-2.5 pb-4 mb-3 border-b border-white/5">
+                  <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-amber to-brand-orange flex items-center justify-center text-black font-black text-xs shadow-md">MT</div>
+                  <div class="flex flex-col">
+                    <span class="text-xs font-black tracking-wider text-white">MARKETING TALK</span>
+                    <span class="text-[9px] font-mono text-emerald-400">● 6 Editors Active</span>
+                  </div>
+                </div>
+
+                <!-- Channels List -->
+                <div class="space-y-4 overflow-y-auto no-scrollbar text-xs">
+                  <div>
+                    <span class="text-[10px] uppercase font-mono tracking-widest text-slate-500 font-bold block mb-1.5">Operations</span>
+                    <div class="space-y-1">
+                      <div class="px-2 py-1 rounded text-slate-400 hover:text-white flex items-center gap-1.5 cursor-pointer text-[11px]">
+                        <span>🏁</span> start-here
+                      </div>
+                      <div class="px-2 py-1 rounded text-slate-400 hover:text-white flex items-center gap-1.5 cursor-pointer text-[11px]">
+                        <span>📁</span> raw-footage-intake
+                      </div>
+                      <div class="px-2 py-1 rounded text-slate-400 hover:text-white flex items-center gap-1.5 cursor-pointer text-[11px]">
+                        <span>🚀</span> deliverables-review
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span class="text-[10px] uppercase font-mono tracking-widest text-slate-500 font-bold block mb-1.5">Client Channels</span>
+                    <div class="space-y-1">
+                      <div class="px-2 py-1.5 rounded-lg bg-brand-orange/15 border border-brand-orange/40 text-brand-amber font-bold flex items-center gap-1.5 cursor-pointer text-[11px] shadow-sm">
+                        <span>💬</span> service-chat
+                      </div>
+                      <div class="px-2 py-1 rounded text-slate-400 hover:text-white flex items-center gap-1.5 cursor-pointer text-[11px]">
+                        <span>🎯</span> creative-hooks
+                      </div>
+                      <div class="px-2 py-1 rounded text-slate-400 hover:text-white flex items-center gap-1.5 cursor-pointer text-[11px]">
+                        <span>💰</span> big-wins
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span class="text-[10px] uppercase font-mono tracking-widest text-slate-500 font-bold block mb-1.5">Studio Voice</span>
+                    <div class="space-y-1">
+                      <div class="px-2 py-1 rounded text-slate-400 hover:text-white flex items-center gap-1.5 cursor-pointer text-[11px]">
+                        <span>🎙️</span> editor-huddle
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- User Footer -->
+                <div class="mt-auto pt-3 border-t border-white/5 flex items-center gap-2">
+                  <div class="w-7 h-7 rounded-full bg-slate-800 border border-white/20 flex items-center justify-center text-[10px] text-white font-bold">VIP</div>
+                  <div class="flex flex-col">
+                    <span class="text-[11px] font-bold text-white">Client Portal</span>
+                    <span class="text-[9px] text-emerald-400 font-mono">Connected</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Area: Chat Feed & Live Interactive Typing Input -->
+              <div class="flex-1 flex flex-col justify-between bg-[#0F1015] p-3 sm:p-5">
+                
+                <!-- Chat Window Top Bar -->
+                <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/5 text-xs text-slate-400">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                    <span class="ml-2 font-mono text-slate-200 font-bold flex items-center gap-1.5">
+                      <span>💬</span> # service-chat
+                    </span>
+                  </div>
+                  <span class="text-[11px] text-emerald-400 font-mono flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    6 Editors Online
+                  </span>
+                </div>
+
+                <!-- Message Feed (Scrollable) -->
+                <div id="chat-message-feed" class="flex-1 overflow-y-auto no-scrollbar pr-1 mb-3 space-y-3.5 max-h-[380px]">
+                  
+                  <!-- Static Initial Message 1 -->
+                  <div class="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Marcus" class="w-8 h-8 rounded-full object-cover border border-brand-orange/40 flex-shrink-0" />
+                    <div class="bg-white/5 p-3 rounded-xl rounded-tl-none border border-white/5 w-full">
+                      <div class="flex items-center justify-between mb-1">
+                        <span class="text-xs font-bold text-white">Marcus Vance (Miami Real Estate)</span>
+                        <span class="text-[10px] text-slate-500 font-mono">10:42 AM</span>
+                      </div>
+                      <p class="text-xs text-slate-300 leading-relaxed">
+                        Yo <span class="text-brand-amber font-semibold">@MarketingTalk Team</span>, the luxury villa reel crossed <strong class="text-brand-orange">420,000 views</strong> on IG Reels! Booked 3 private investor walkthroughs already! 🔥
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Static Initial Message 2 -->
+                  <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand-amber to-brand-orange flex items-center justify-center text-black font-black text-xs flex-shrink-0 shadow-md">
+                      MT
+                    </div>
+                    <div class="bg-brand-orange/10 p-3 rounded-xl rounded-tl-none border border-brand-orange/30 w-full">
+                      <div class="flex items-center justify-between mb-1">
+                        <span class="text-xs font-bold text-brand-amber">Lead Producer (Marketing Talk)</span>
+                        <span class="text-[10px] text-slate-500 font-mono">10:45 AM</span>
+                      </div>
+                      <p class="text-xs text-slate-200 leading-relaxed">
+                        Let's go Marcus! 🚀 Next 4 property walkthroughs just finished grading & captioning. Uploaded to your shared Drive folder ready to publish!
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Static Initial Message 3 -->
+                  <div class="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Julian" class="w-8 h-8 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div class="bg-white/5 p-3 rounded-xl rounded-tl-none border border-white/5 w-full">
+                      <div class="flex items-center justify-between mb-1">
+                        <span class="text-xs font-bold text-white">Julian Hayes (Executive Founder)</span>
+                        <span class="text-[10px] text-slate-500 font-mono">11:15 AM</span>
+                      </div>
+                      <p class="text-xs text-slate-300 leading-relaxed">
+                        Just closed a £5k advisory deal off the podcast cut you guys delivered yesterday. Retention held at 82% all the way through!
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Typing Indicator Bubble -->
+                <div id="chat-typing-indicator" class="hidden flex items-center gap-2 px-3 py-1.5 mb-2 text-[11px] font-mono text-brand-amber bg-brand-orange/10 rounded-lg border border-brand-orange/20 w-fit">
+                  <div class="flex items-center gap-1">
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                  </div>
+                  <span>Marketing Talk Producer is typing...</span>
+                </div>
+
+                <!-- Interactive Chat Input Bar with Typewriter Simulation & Glowing Send Button -->
+                <div class="mt-auto pt-2">
+                  <div class="bg-[#141620] rounded-full p-2 pl-5 border border-white/10 flex items-center justify-between focus-within:border-brand-amber/60 transition-all shadow-xl">
+                    <input 
+                      id="chat-typewriter-input" 
+                      type="text" 
+                      placeholder="I'm still offering a bit of everything... is that bad?" 
+                      class="bg-transparent text-xs text-white placeholder-slate-500 outline-none w-full mr-3 font-medium tracking-wide" 
+                      autocomplete="off"
+                    />
+                    <button 
+                      id="chat-send-btn" 
+                      class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#FF7A00] to-[#FFA800] text-black flex items-center justify-center flex-shrink-0 shadow-lg shadow-orange-500/50 hover:scale-105 active:scale-95 transition-all cursor-pointer group" 
+                      title="Send message"
+                      aria-label="Send message"
+                    >
+                      <svg class="w-4 h-4 fill-black translate-x-0.5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                        <polygon points="3 2 21 12 3 22 7 12 3 2"></polygon>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex items-center justify-between mt-2 px-3 text-[10px] text-slate-500 font-mono">
+                    <span class="flex items-center gap-1.5 text-emerald-400">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      Live Interactive Chat
+                    </span>
+                    <span>Type or watch auto-simulation</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="lg:col-span-4">
+            <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-2 block">Direct Access & Communication</span>
+            <h3 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-6">
+              A Dedicated Team That Won't Let You Fall Behind.
+            </h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Surround your brand with editors who care about your watch time, conversion rates, and weekly posting rhythm. Get direct answers, instant revisions, and real feedback.
+            </p>
+            <a href="#contact" class="btn-wealth px-8 py-3.5 text-xs uppercase tracking-wider font-extrabold shadow-xl">
+              Get Your Dedicated Editing Team →
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: PROOF WALL / RESULTS SHOWCASE (Wealth Portal Exact Feature 00:40 - 00:44) -->
+    <section id="proof" class="py-24 bg-dark-900/60 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="max-w-3xl mx-auto mb-16 reveal-on-scroll">
+          <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-3 block">Real Proof. Zero Gimmicks.</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+            Join A Roster of High-Performing Brands
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Connect with an editing studio that focuses on verified deliverables and genuine content reach.
+          </p>
+        </div>
+
+        <!-- Infinite Multi-Column Vertical Scrolling Proof Wall (The Wealth Portal Style) -->
+        <div class="relative h-[660px] overflow-hidden my-4 rounded-2xl bg-dark-950/40 border border-white/5 p-4 sm:p-6 reveal-on-scroll stagger-1">
+          
+          <!-- Top & Bottom Gradient Masks for Seamless Entry/Exit -->
+          <div class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0e] via-[#0a0a0e]/85 to-transparent z-20"></div>
+          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0e] via-[#0a0a0e]/85 to-transparent z-20"></div>
+
+          <!-- 3-Column Scrolling Wall Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left h-full">
+            
+            <!-- COLUMN 1: Scrolling UP -->
+            <div class="overflow-hidden relative h-full">
+              <div class="animate-scroll-col-up flex flex-col gap-6">
+                <!-- CARD 1.1: Discord Deal Post -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pb-3 mb-3 border-b border-white/5">
+                    <span class="flex items-center gap-1.5 text-brand-orange font-bold">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                      # deals-closed
+                    </span>
+                    <span class="text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded">£1,500 Retainer</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 mb-2.5">
+                    <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-brand-orange to-brand-amber flex items-center justify-center text-[11px] font-black text-black">JW</div>
+                    <div>
+                      <div class="flex items-center gap-1.5">
+                        <span class="text-xs font-bold text-white">Josh Whitehouse</span>
+                        <span class="text-[9px] bg-brand-orange/20 text-brand-orange px-1 rounded font-mono font-bold">VIP</span>
+                      </div>
+                      <span class="text-[10px] text-slate-500">Today at 3:45 PM</span>
+                    </div>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                    "Closed another <span class="text-brand-amber font-semibold">£1,500/mo retainer</span> for 16 Reels + 2 Long-form videos. Marketing Talk's 48h turnaround and motion hooks made pitching effortless."
+                  </p>
+                  <div class="flex items-center gap-2 text-[10px] text-slate-400">
+                    <span class="bg-white/5 px-2 py-1 rounded-md border border-white/5">🔥 14</span>
+                    <span class="bg-white/5 px-2 py-1 rounded-md border border-white/5">🚀 9</span>
+                    <span class="bg-white/5 px-2 py-1 rounded-md border border-white/5">🎉 18</span>
+                  </div>
+                </div>
+
+                <!-- CARD 1.2: Real Estate Viral Views -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-orange">Instagram Reels</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">420K+ Views</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">Luxury Real Estate Tour</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mb-3">Paced with dynamic speed ramps, 3D text tracking, and ambient acoustic sound design.</p>
+                  <div class="p-2.5 rounded-lg bg-white/5 text-[11px] font-mono text-slate-300 border border-white/5">
+                    Outcome: 3 Private Investor Showings Booked
+                  </div>
+                </div>
+
+                <!-- CARD 1.3: Stripe Payout Notification -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                    <span class="flex items-center gap-1.5 font-bold text-emerald-400 font-mono">
+                      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                      Stripe Payout Cleared
+                    </span>
+                    <span class="text-[10px] font-mono text-slate-500">2h ago</span>
+                  </div>
+                  <div class="text-xl font-black text-white font-mono mb-1">
+                    $4,850.00
+                  </div>
+                  <p class="text-xs text-slate-400">Monthly Video Retainer • B2B SaaS Authority Series (8 Long-form Delivered)</p>
+                </div>
+
+                <!-- CARD 1.4: Creator Review -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center gap-2.5 mb-2.5">
+                    <div class="w-7 h-7 rounded-full bg-slate-700 flex items-center justify-center text-[11px] font-black text-white">AH</div>
+                    <div>
+                      <span class="text-xs font-bold text-white">Aubriana Hytner</span>
+                      <span class="text-[10px] text-slate-400 block">YouTube Educator (85K Subs)</span>
+                    </div>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-2">
+                    "Working with Marketing Talk saved me 25+ hours a week. Editing was bottlenecking my entire channel. Now I just film and upload."
+                  </p>
+                  <div class="text-[11px] text-brand-amber font-mono font-semibold">★ ★ ★ ★ ★ Verified Client</div>
+                </div>
+
+                <!-- DUPLICATE OF COLUMN 1 FOR SEAMLESS 100% LOOP -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pb-3 mb-3 border-b border-white/5">
+                    <span class="flex items-center gap-1.5 text-brand-orange font-bold">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                      # deals-closed
+                    </span>
+                    <span class="text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded">£1,500 Retainer</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 mb-2.5">
+                    <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-brand-orange to-brand-amber flex items-center justify-center text-[11px] font-black text-black">JW</div>
+                    <div>
+                      <div class="flex items-center gap-1.5">
+                        <span class="text-xs font-bold text-white">Josh Whitehouse</span>
+                        <span class="text-[9px] bg-brand-orange/20 text-brand-orange px-1 rounded font-mono font-bold">VIP</span>
+                      </div>
+                      <span class="text-[10px] text-slate-500">Today at 3:45 PM</span>
+                    </div>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                    "Closed another <span class="text-brand-amber font-semibold">£1,500/mo retainer</span> for 16 Reels + 2 Long-form videos. Marketing Talk's 48h turnaround and motion hooks made pitching effortless."
+                  </p>
+                  <div class="flex items-center gap-2 text-[10px] text-slate-400">
+                    <span class="bg-white/5 px-2 py-1 rounded-md border border-white/5">🔥 14</span>
+                    <span class="bg-white/5 px-2 py-1 rounded-md border border-white/5">🚀 9</span>
+                    <span class="bg-white/5 px-2 py-1 rounded-md border border-white/5">🎉 18</span>
+                  </div>
+                </div>
+
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-orange">Instagram Reels</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">420K+ Views</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">Luxury Real Estate Tour</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mb-3">Paced with dynamic speed ramps, 3D text tracking, and ambient acoustic sound design.</p>
+                  <div class="p-2.5 rounded-lg bg-white/5 text-[11px] font-mono text-slate-300 border border-white/5">
+                    Outcome: 3 Private Investor Showings Booked
+                  </div>
+                </div>
+
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                    <span class="flex items-center gap-1.5 font-bold text-emerald-400 font-mono">
+                      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                      Stripe Payout Cleared
+                    </span>
+                    <span class="text-[10px] font-mono text-slate-500">2h ago</span>
+                  </div>
+                  <div class="text-xl font-black text-white font-mono mb-1">
+                    $4,850.00
+                  </div>
+                  <p class="text-xs text-slate-400">Monthly Video Retainer • B2B SaaS Authority Series (8 Long-form Delivered)</p>
+                </div>
+
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center gap-2.5 mb-2.5">
+                    <div class="w-7 h-7 rounded-full bg-slate-700 flex items-center justify-center text-[11px] font-black text-white">AH</div>
+                    <div>
+                      <span class="text-xs font-bold text-white">Aubriana Hytner</span>
+                      <span class="text-[10px] text-slate-400 block">YouTube Educator (85K Subs)</span>
+                    </div>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-2">
+                    "Working with Marketing Talk saved me 25+ hours a week. Editing was bottlenecking my entire channel. Now I just film and upload."
+                  </p>
+                  <div class="text-[11px] text-brand-amber font-mono font-semibold">★ ★ ★ ★ ★ Verified Client</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- COLUMN 2: Scrolling DOWN -->
+            <div class="overflow-hidden relative h-full">
+              <div class="animate-scroll-col-down flex flex-col gap-6">
+                <!-- CARD 2.1: Meta & TikTok Ads 4.1x ROAS (Glowing Border) -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-brand-orange/50 wealth-card-active shadow-xl">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-amber">Meta & TikTok Paid Ads</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">4.1x ROAS</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">DTC Skincare Brand Funnel</h4>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-3">A/B tested 3 distinct visual hook variations to break creative fatigue on paid feeds.</p>
+                  <div class="p-2.5 rounded-lg bg-brand-orange/10 text-[11px] font-mono text-brand-amber border border-brand-orange/20">
+                    Outcome: 28% Lower Cost Per Acquisition
+                  </div>
+                </div>
+
+                <!-- CARD 2.2: Sales / View Growth Graph Mockup -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="w-6 h-6 rounded-md bg-purple-600/30 flex items-center justify-center text-[10px] text-purple-300 font-bold">JK</div>
+                    <div>
+                      <span class="text-xs font-bold text-white">Jakub Kaczmarczyk</span>
+                      <span class="text-[10px] text-slate-500 block">Growth Partner</span>
+                    </div>
+                  </div>
+                  <p class="text-xs text-slate-300 mb-3">"The editing pacing updates on our short-form funnel pushed views through the roof:"</p>
+                  <div class="bg-black/60 rounded-xl p-3 border border-white/10">
+                    <div class="flex justify-between items-center text-[10px] text-slate-400 mb-2 font-mono">
+                      <span>30-Day Channel Reach</span>
+                      <span class="text-emerald-400 font-bold">+340%</span>
+                    </div>
+                    <!-- Mini SVG Line Chart -->
+                    <svg class="w-full h-12 text-brand-orange" viewBox="0 0 100 30" fill="none">
+                      <path d="M 0 25 Q 20 22 40 18 T 70 8 T 100 2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                      <path d="M 0 25 Q 20 22 40 18 T 70 8 T 100 2 L 100 30 L 0 30 Z" fill="currentColor" fill-opacity="0.1"/>
+                    </svg>
+                    <div class="flex justify-between text-[10px] font-mono text-slate-400 mt-2 pt-2 border-t border-white/5">
+                      <span>Views: <strong class="text-white">124,500</strong></span>
+                      <span>Watch Time: <strong class="text-emerald-400">82%</strong></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CARD 2.3: Mobile Revenue Screenshot Mockup -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-[10px] text-slate-300 font-bold">NY</div>
+                    <span class="text-xs font-bold text-white">Nikolai Yevsyukov</span>
+                  </div>
+                  <p class="text-xs text-slate-300 mb-3">
+                    "I did it!! $1,165 profit on our digital product launch in 48 hours using the new short-form funnel."
+                  </p>
+                  <div class="bg-[#12131a] rounded-xl p-3 border border-white/10 flex items-center justify-between">
+                    <div>
+                      <span class="text-[10px] text-slate-400 block uppercase font-mono">Revenue (48h)</span>
+                      <span class="text-base font-black text-emerald-400 font-mono">$1,165.00</span>
+                    </div>
+                    <div class="text-right">
+                      <span class="text-[10px] text-slate-400 block uppercase font-mono">Orders</span>
+                      <span class="text-sm font-bold text-white font-mono">21 Sales</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CARD 2.4: Fintech CEO Thought Leadership -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-orange">Personal Brand</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">+12K Followers</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">Fintech CEO Thought Leadership</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mb-3">Transformed 60-minute podcast rambling into 24 bite-sized authority hooks.</p>
+                  <div class="p-2.5 rounded-lg bg-white/5 text-[11px] font-mono text-slate-300 border border-white/5">
+                    Outcome: 82% Average Completion Rate
+                  </div>
+                </div>
+
+                <!-- DUPLICATE OF COLUMN 2 FOR SEAMLESS 100% LOOP -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-brand-orange/50 wealth-card-active shadow-xl">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-amber">Meta & TikTok Paid Ads</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">4.1x ROAS</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">DTC Skincare Brand Funnel</h4>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-3">A/B tested 3 distinct visual hook variations to break creative fatigue on paid feeds.</p>
+                  <div class="p-2.5 rounded-lg bg-brand-orange/10 text-[11px] font-mono text-brand-amber border border-brand-orange/20">
+                    Outcome: 28% Lower Cost Per Acquisition
+                  </div>
+                </div>
+
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="w-6 h-6 rounded-md bg-purple-600/30 flex items-center justify-center text-[10px] text-purple-300 font-bold">JK</div>
+                    <div>
+                      <span class="text-xs font-bold text-white">Jakub Kaczmarczyk</span>
+                      <span class="text-[10px] text-slate-500 block">Growth Partner</span>
+                    </div>
+                  </div>
+                  <p class="text-xs text-slate-300 mb-3">"The editing pacing updates on our short-form funnel pushed views through the roof:"</p>
+                  <div class="bg-black/60 rounded-xl p-3 border border-white/10">
+                    <div class="flex justify-between items-center text-[10px] text-slate-400 mb-2 font-mono">
+                      <span>30-Day Channel Reach</span>
+                      <span class="text-emerald-400 font-bold">+340%</span>
+                    </div>
+                    <svg class="w-full h-12 text-brand-orange" viewBox="0 0 100 30" fill="none">
+                      <path d="M 0 25 Q 20 22 40 18 T 70 8 T 100 2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                      <path d="M 0 25 Q 20 22 40 18 T 70 8 T 100 2 L 100 30 L 0 30 Z" fill="currentColor" fill-opacity="0.1"/>
+                    </svg>
+                    <div class="flex justify-between text-[10px] font-mono text-slate-400 mt-2 pt-2 border-t border-white/5">
+                      <span>Views: <strong class="text-white">124,500</strong></span>
+                      <span>Watch Time: <strong class="text-emerald-400">82%</strong></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-[10px] text-slate-300 font-bold">NY</div>
+                    <span class="text-xs font-bold text-white">Nikolai Yevsyukov</span>
+                  </div>
+                  <p class="text-xs text-slate-300 mb-3">
+                    "I did it!! $1,165 profit on our digital product launch in 48 hours using the new short-form funnel."
+                  </p>
+                  <div class="bg-[#12131a] rounded-xl p-3 border border-white/10 flex items-center justify-between">
+                    <div>
+                      <span class="text-[10px] text-slate-400 block uppercase font-mono">Revenue (48h)</span>
+                      <span class="text-base font-black text-emerald-400 font-mono">$1,165.00</span>
+                    </div>
+                    <div class="text-right">
+                      <span class="text-[10px] text-slate-400 block uppercase font-mono">Orders</span>
+                      <span class="text-sm font-bold text-white font-mono">21 Sales</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-orange">Personal Brand</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">+12K Followers</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">Fintech CEO Thought Leadership</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mb-3">Transformed 60-minute podcast rambling into 24 bite-sized authority hooks.</p>
+                  <div class="p-2.5 rounded-lg bg-white/5 text-[11px] font-mono text-slate-300 border border-white/5">
+                    Outcome: 82% Average Completion Rate
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- COLUMN 3: Scrolling UP (Hidden on small mobile, visible on lg) -->
+            <div class="hidden lg:block overflow-hidden relative h-full">
+              <div class="animate-scroll-col-up flex flex-col gap-6" style="animation-duration: 26s !important;">
+                <!-- CARD 3.1: YouTube Shorts 65K Installs -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-orange">YouTube Shorts</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">65K Installs</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">Fitness Mobile App Launch</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mb-3">High-paced kinetic typography synced to punchy beats with clear app store CTA.</p>
+                  <div class="p-2.5 rounded-lg bg-white/5 text-[11px] font-mono text-slate-300 border border-white/5">
+                    Outcome: Top 10 Chart Ranking in Fitness
+                  </div>
+                </div>
+
+                <!-- CARD 3.2: Discord Review Post -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pb-3 mb-3 border-b border-white/5">
+                    <span class="flex items-center gap-1.5 text-brand-orange font-bold">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2m-7 0H4a2 2 0 00-2 2v6a2 2 0 002 2h3"/></svg>
+                      # client-feedback
+                    </span>
+                    <span class="text-brand-amber font-mono text-[10px]">Turnaround: 44h</span>
+                  </div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="w-6 h-6 rounded-full bg-blue-600/30 flex items-center justify-center text-[10px] text-blue-300 font-bold">BW</div>
+                    <span class="text-xs font-bold text-white">Bartosz Weber</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                    "First batch of videos delivered ahead of schedule. Sound design and colour grading are phenomenal. 10/10 service."
+                  </p>
+                  <div class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded inline-block">
+                    ✓ Deliverable Approved Without Revisions
+                  </div>
+                </div>
+
+                <!-- CARD 3.3: Course Creator Case Card -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-orange">Course Creator</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">14,000 Signups</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">Online Educational Funnel</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mb-3">Clean talking-head cuts paired with animated diagrams and visual metaphors.</p>
+                  <div class="p-2.5 rounded-lg bg-white/5 text-[11px] font-mono text-slate-300 border border-white/5">
+                    Outcome: 3.4x Increase in Webinar Registrations
+                  </div>
+                </div>
+
+                <!-- CARD 3.4: Clinic Transformation Case Reel -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-orange">Medical Aesthetic</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">85 Inquiries</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">Clinic Transformation Case Reel</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mb-3">Before and after visual storytelling with subtle luxury grading and doctor voiceover.</p>
+                  <div class="p-2.5 rounded-lg bg-white/5 text-[11px] font-mono text-slate-300 border border-white/5">
+                    Outcome: High-Ticket Bookings Filled for 6 Weeks
+                  </div>
+                </div>
+
+                <!-- DUPLICATE OF COLUMN 3 FOR SEAMLESS 100% LOOP -->
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-orange">YouTube Shorts</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">65K Installs</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">Fitness Mobile App Launch</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mb-3">High-paced kinetic typography synced to punchy beats with clear app store CTA.</p>
+                  <div class="p-2.5 rounded-lg bg-white/5 text-[11px] font-mono text-slate-300 border border-white/5">
+                    Outcome: Top 10 Chart Ranking in Fitness
+                  </div>
+                </div>
+
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pb-3 mb-3 border-b border-white/5">
+                    <span class="flex items-center gap-1.5 text-brand-orange font-bold">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2m-7 0H4a2 2 0 00-2 2v6a2 2 0 002 2h3"/></svg>
+                      # client-feedback
+                    </span>
+                    <span class="text-brand-amber font-mono text-[10px]">Turnaround: 44h</span>
+                  </div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="w-6 h-6 rounded-full bg-blue-600/30 flex items-center justify-center text-[10px] text-blue-300 font-bold">BW</div>
+                    <span class="text-xs font-bold text-white">Bartosz Weber</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                    "First batch of videos delivered ahead of schedule. Sound design and colour grading are phenomenal. 10/10 service."
+                  </p>
+                  <div class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded inline-block">
+                    ✓ Deliverable Approved Without Revisions
+                  </div>
+                </div>
+
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-orange">Course Creator</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">14,000 Signups</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">Online Educational Funnel</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mb-3">Clean talking-head cuts paired with animated diagrams and visual metaphors.</p>
+                  <div class="p-2.5 rounded-lg bg-white/5 text-[11px] font-mono text-slate-300 border border-white/5">
+                    Outcome: 3.4x Increase in Webinar Registrations
+                  </div>
+                </div>
+
+                <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-mono text-brand-orange">Medical Aesthetic</span>
+                    <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">85 Inquiries</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">Clinic Transformation Case Reel</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed mb-3">Before and after visual storytelling with subtle luxury grading and doctor voiceover.</p>
+                  <div class="p-2.5 rounded-lg bg-white/5 text-[11px] font-mono text-slate-300 border border-white/5">
+                    Outcome: High-Ticket Bookings Filled for 6 Weeks
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div><div class="mt-12 text-center">
+          <a href="#contact" class="btn-wealth px-9 py-4 text-xs uppercase tracking-wider font-extrabold shadow-2xl">
+            Get A Free Video Editing Quote →
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <!-- SECTION: BEFORE VS AFTER COMPARISON (Wealth Portal Exact Feature 00:46 - 00:47) -->
+    <section id="comparison" class="py-24 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="max-w-2xl mx-auto mb-16 reveal-on-scroll">
+          <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-3 block">Clear Comparison</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+            Your Current Path Isn't Working
+          </h2>
+          <p class="text-slate-400 text-sm">
+            Stop losing hours to timeline editing and start publishing consistently.
+          </p>
+        </div>
+
+        <!-- INTERACTIVE BEFORE & AFTER TRANSFORMATION SLIDER -->
+        <div class="mb-14 relative max-w-4xl mx-auto reveal-on-scroll stagger-1">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mb-4">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-brand-orange animate-ping"></span>
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold">Interactive Transformation Preview</span>
+            </div>
+            <div class="inline-flex p-1 rounded-full bg-white/5 border border-white/10 text-xs font-bold">
+              <button id="slider-btn-before" type="button" class="px-3.5 py-1 rounded-full text-slate-400 hover:text-white transition-all">Raw Footage</button>
+              <button id="slider-btn-split" type="button" class="px-3.5 py-1 rounded-full bg-brand-orange text-black font-extrabold shadow-md transition-all">Split 50/50</button>
+              <button id="slider-btn-after" type="button" class="px-3.5 py-1 rounded-full text-slate-400 hover:text-white transition-all">4K Master Cut</button>
+            </div>
+          </div>
+
+          <div id="before-after-container" class="relative aspect-video rounded-2xl overflow-hidden border border-white/15 shadow-2xl select-none group cursor-ew-resize bg-dark-950">
+            <!-- After Layer (Full 4K Graded Master Cut) -->
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600&auto=format&fit=crop&q=80" alt="Master Cut" class="absolute inset-0 w-full h-full object-cover filter saturate-125 contrast-110" />
+            <div class="absolute bottom-4 right-4 z-10 px-3.5 py-1.5 rounded-lg bg-dark-950/85 border border-brand-orange/40 text-brand-amber text-xs font-bold flex items-center gap-2 backdrop-blur-md shadow-lg">
+              <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span> AFTER: 4K Master Cut • Cinema Color Grade & Audio Polish
+            </div>
+
+            <!-- Before Layer (Clipped Raw Camera Footage) -->
+            <div id="before-image-clip" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-brand-orange shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600&auto=format&fit=crop&q=80" alt="Raw Footage" class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-75 brightness-75 blur-[0.4px]" style="max-width: none; width: 100%; height: 100%;" />
+              <div class="absolute bottom-4 left-4 z-10 px-3.5 py-1.5 rounded-lg bg-dark-950/85 border border-white/10 text-slate-400 text-xs font-bold flex items-center gap-2 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-slate-500"></span> BEFORE: Flat Raw Mobile Clip
+              </div>
+            </div>
+
+            <!-- Draggable Center Handle Bar -->
+            <div id="before-after-handle" class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-8 pointer-events-none flex items-center justify-center z-20">
+              <div class="w-10 h-10 rounded-full bg-brand-orange text-black font-black text-xs flex items-center justify-center shadow-xl shadow-orange-950/80 border-2 border-white cursor-ew-resize hover:scale-110 transition-transform">
+                ↔
+              </div>
+            </div>
+          </div>
+          <p class="text-center text-[11px] font-mono text-slate-500 mt-2.5">
+            Drag the orange handle ↔ or toggle buttons above to inspect post-production depth
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+          
+          <div class="wealth-card p-8 bg-dark-900 border-white/10 flex flex-col justify-between reveal-on-scroll stagger-1">
+            <div>
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-widest block mb-2">The Old Way</span>
+              <h3 class="text-2xl font-bold text-white mb-6">Before Marketing Talk</h3>
+              
+              <ul class="space-y-4 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-center gap-3">
+                  <span class="text-red-400 font-bold text-base">✕</span>
+                  <span>Spending 8+ hours editing a single video on weekends</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="text-red-400 font-bold text-base">✕</span>
+                  <span>No clear hook framework or retention pacing</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="text-red-400 font-bold text-base">✕</span>
+                  <span>Inconsistent posting schedule that hurts algorithm reach</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="text-red-400 font-bold text-base">✕</span>
+                  <span>Ghosting freelancers who miss deadlines and ruin launches</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="text-red-400 font-bold text-base">✕</span>
+                  <span>Hard drives full of recorded footage that never gets published</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/5">
+              <div class="w-full py-3.5 rounded-full bg-white/5 border border-white/10 text-center text-xs font-bold uppercase tracking-wider text-slate-400">
+                Stay Stuck
+              </div>
+            </div>
+          </div>
+
+          <div class="wealth-card p-8 bg-dark-900 border-2 border-brand-orange wealth-card-active flex flex-col justify-between shadow-2xl shadow-orange-950/50 border-rotating-glow reveal-on-scroll stagger-2">
+            <div>
+              <span class="text-xs font-mono text-brand-amber uppercase tracking-widest block mb-2">The Agency Standard</span>
+              <h3 class="text-2xl font-bold text-white mb-6">After Marketing Talk</h3>
+              
+              <ul class="space-y-4 text-xs sm:text-sm text-slate-100">
+                <li class="flex items-center gap-3">
+                  <span class="text-brand-orange font-bold text-base">✓</span>
+                  <span>16 to 30 high-retention master edits delivered every month</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="text-brand-orange font-bold text-base">✓</span>
+                  <span>Aggressive 24-48h turnaround directly to your cloud drive</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="text-brand-orange font-bold text-base">✓</span>
+                  <span>100% brand-consistent typography, subtitles & color grade</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="text-brand-orange font-bold text-base">✓</span>
+                  <span>Dedicated senior editing team assigned exclusively to you</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="text-brand-orange font-bold text-base">✓</span>
+                  <span>You focus purely on filming and closing inbound deals</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-brand-orange/30">
+              <a href="#contact" class="btn-wealth w-full py-4 text-center block text-xs font-black uppercase tracking-wider shadow-xl">
+                Get Your Free Quote →
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 09: WORKFLOW TIMELINE -->
+    <section id="process" class="py-24 bg-dark-900/60 border-t border-white/5 relative overflow-hidden">
+      <!-- Background Ambient Glow -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[350px] bg-brand-orange/5 blur-[140px] pointer-events-none rounded-full"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        
+        <div class="max-w-3xl mx-auto mb-16 reveal-on-scroll">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-mono font-bold tracking-widest uppercase mb-4 shadow-sm shadow-brand-orange/10">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange animate-ping"></span>
+            Simple 4-Step Pipeline
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+            A Simple Workflow From Footage to Final Video
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+            Zero friction, no confusing dashboards. Just send your raw files and receive publish-ready, high-retention content.
+          </p>
+        </div>
+
+        <div class="relative">
+          <!-- Connecting laser pipeline track behind cards on desktop -->
+          <div class="hidden lg:block absolute top-[68px] left-[10%] right-[10%] h-[2px] z-0 pointer-events-none">
+            <div class="w-full h-full bg-white/10 relative overflow-hidden rounded-full">
+              <div class="timeline-laser-pulse absolute inset-0 bg-gradient-to-r from-transparent via-brand-orange to-transparent"></div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left relative z-10">
+            
+            <!-- Step 01 -->
+            <div class="wealth-card process-card-ultra p-7 rounded-2xl relative group overflow-hidden border border-white/10 hover:border-amber-500/50 bg-gradient-to-b from-dark-850/90 via-dark-900/95 to-dark-950/95 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-300 reveal-on-scroll stagger-1" style="--card-accent: #FFA800; --glow-color: rgba(255, 168, 0, 0.45);">
+              <div class="flex items-start justify-between mb-6">
+                <!-- 3D Mega Icon Badge 01 -->
+                <div class="icon-badge-3d-step bg-gradient-to-br from-amber-500/30 via-orange-600/20 to-amber-950/50 border border-amber-400/50 text-amber-400">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>
+                    <path d="M12 12v9"/>
+                    <path d="m8 16 4-4 4 4"/>
+                    <circle cx="12" cy="7" r="1" fill="currentColor"/>
+                  </svg>
+                </div>
+                <div class="text-right flex flex-col items-end">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black tracking-widest uppercase bg-amber-500/15 text-amber-300 border border-amber-500/30 mb-1">
+                    STEP 01
+                  </span>
+                  <span class="text-4xl font-black font-mono text-white/10 group-hover:text-amber-500/25 transition-colors">01</span>
+                </div>
+              </div>
+              <h3 class="text-lg font-black text-white mb-2 group-hover:text-amber-300 transition-colors">Send Raw Footage</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-6">
+                Upload clips via Google Drive, Dropbox, or Frame.io. No need to pre-cut, organize, or rename files.
+              </p>
+              <!-- Micro Deliverables Chips -->
+              <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+                <span class="deliverable-chip">
+                  <span class="text-amber-400">✓</span> Drive / Dropbox / Frame
+                </span>
+                <span class="deliverable-chip">
+                  <span class="text-amber-400">✓</span> Zero Pre-Sorting Needed
+                </span>
+                <span class="deliverable-chip">
+                  <span class="text-amber-400">✓</span> 256-bit Encrypted Sync
+                </span>
+              </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="wealth-card process-card-ultra p-7 rounded-2xl relative group overflow-hidden border border-white/10 hover:border-cyan-500/50 bg-gradient-to-b from-dark-850/90 via-dark-900/95 to-dark-950/95 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-300 reveal-on-scroll stagger-2" style="--card-accent: #00E5FF; --glow-color: rgba(0, 229, 255, 0.45);">
+              <div class="flex items-start justify-between mb-6">
+                <!-- 3D Mega Icon Badge 02 -->
+                <div class="icon-badge-3d-step bg-gradient-to-br from-cyan-500/30 via-blue-600/20 to-cyan-950/50 border border-cyan-400/50 text-cyan-400">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="21" x2="4" y2="14"/>
+                    <line x1="4" y1="10" x2="4" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="12"/>
+                    <line x1="12" y1="8" x2="12" y2="3"/>
+                    <line x1="20" y1="21" x2="20" y2="16"/>
+                    <line x1="20" y1="12" x2="20" y2="3"/>
+                    <circle cx="4" cy="12" r="2.5" fill="currentColor"/>
+                    <circle cx="12" cy="10" r="2.5" fill="currentColor"/>
+                    <circle cx="20" cy="14" r="2.5" fill="currentColor"/>
+                  </svg>
+                </div>
+                <div class="text-right flex flex-col items-end">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black tracking-widest uppercase bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 mb-1">
+                    STEP 02
+                  </span>
+                  <span class="text-4xl font-black font-mono text-white/10 group-hover:text-cyan-500/25 transition-colors">02</span>
+                </div>
+              </div>
+              <h3 class="text-lg font-black text-white mb-2 group-hover:text-cyan-300 transition-colors">Share Requirements</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-6">
+                Drop quick notes on preferred aspect ratio, hook reference, brand colors, typography, and desired tone.
+              </p>
+              <!-- Micro Deliverables Chips -->
+              <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+                <span class="deliverable-chip">
+                  <span class="text-cyan-400">✓</span> Hook & Style Direction
+                </span>
+                <span class="deliverable-chip">
+                  <span class="text-cyan-400">✓</span> Brand Assets & Fonts
+                </span>
+                <span class="deliverable-chip">
+                  <span class="text-cyan-400">✓</span> 9:16 Shorts & 16:9 Longs
+                </span>
+              </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="wealth-card process-card-ultra p-7 rounded-2xl relative group overflow-hidden border border-white/10 hover:border-purple-500/50 bg-gradient-to-b from-dark-850/90 via-dark-900/95 to-dark-950/95 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-300 reveal-on-scroll stagger-3" style="--card-accent: #C084FC; --glow-color: rgba(192, 132, 252, 0.45);">
+              <div class="flex items-start justify-between mb-6">
+                <!-- 3D Mega Icon Badge 03 -->
+                <div class="icon-badge-3d-step bg-gradient-to-br from-purple-500/30 via-pink-600/20 to-purple-950/50 border border-purple-400/50 text-purple-300">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="6" cy="6" r="3"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+                    <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+                    <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+                    <path d="m19 11 1.5 1.5L19 14" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div class="text-right flex flex-col items-end">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black tracking-widest uppercase bg-purple-500/15 text-purple-300 border border-purple-500/30 mb-1">
+                    STEP 03
+                  </span>
+                  <span class="text-4xl font-black font-mono text-white/10 group-hover:text-purple-300/25 transition-colors">03</span>
+                </div>
+              </div>
+              <h3 class="text-lg font-black text-white mb-2 group-hover:text-purple-300 transition-colors">We Edit & Master</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-6">
+                Our team trims dead air, color grades in 4K, crafts animated subtitles, adds sound FX, and applies retention pacing.
+              </p>
+              <!-- Micro Deliverables Chips -->
+              <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+                <span class="deliverable-chip">
+                  <span class="text-purple-300">✓</span> Retention Cut & Pacing
+                </span>
+                <span class="deliverable-chip">
+                  <span class="text-purple-300">✓</span> 4K Cinematic Color Grade
+                </span>
+                <span class="deliverable-chip">
+                  <span class="text-purple-300">✓</span> 48kHz Sound Design & FX
+                </span>
+              </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="wealth-card process-card-ultra p-7 rounded-2xl relative group overflow-hidden border border-white/10 hover:border-emerald-500/50 bg-gradient-to-b from-dark-850/90 via-dark-900/95 to-dark-950/95 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-300 reveal-on-scroll stagger-4" style="--card-accent: #34D399; --glow-color: rgba(52, 211, 153, 0.45);">
+              <div class="flex items-start justify-between mb-6">
+                <!-- 3D Mega Icon Badge 04 -->
+                <div class="icon-badge-3d-step bg-gradient-to-br from-emerald-500/30 via-teal-600/20 to-emerald-950/50 border border-emerald-400/50 text-emerald-400">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                    <path d="M12 9v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                    <circle cx="16" cy="8" r="1.5" fill="currentColor"/>
+                  </svg>
+                </div>
+                <div class="text-right flex flex-col items-end">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black tracking-widest uppercase bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 mb-1">
+                    STEP 04
+                  </span>
+                  <span class="text-4xl font-black font-mono text-white/10 group-hover:text-emerald-500/25 transition-colors">04</span>
+                </div>
+              </div>
+              <h3 class="text-lg font-black text-white mb-2 group-hover:text-emerald-300 transition-colors">Review & Publish</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-6">
+                Review timestamp by timestamp, request unlimited revisions, and download the finished 4K master ready to post.
+              </p>
+              <!-- Micro Deliverables Chips -->
+              <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+                <span class="deliverable-chip">
+                  <span class="text-emerald-400">✓</span> 24-48h Delivery Turnaround
+                </span>
+                <span class="deliverable-chip">
+                  <span class="text-emerald-400">✓</span> Timestamp Frame.io Revisions
+                </span>
+                <span class="deliverable-chip">
+                  <span class="text-emerald-400">✓</span> Master 4K Ready to Post
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 10: PACKAGES & PRICING -->
+    <section id="pricing" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="max-w-3xl mx-auto mb-16 reveal-on-scroll">
+          <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-3 block">Predictable Monthly Output</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+            Predictable Video Editing Packages
+          </h2>
+          <p class="text-slate-400 text-sm">
+            Choose a recurring plan that fits your monthly content volume. Custom pricing tailored to international deliverables.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch text-left">
+          
+          <div class="wealth-card p-8 flex flex-col justify-between reveal-on-scroll stagger-1">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-widest text-slate-400 block mb-2">Entry Plan</span>
+              <h3 class="text-2xl font-bold text-white mb-2">Starter</h3>
+              <p class="text-xs text-slate-400 mb-6">Ideal for founders starting their video presence.</p>
+              
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5 mb-6 text-center">
+                <span class="text-3xl font-black text-white font-mono">8 Videos</span>
+                <span class="text-xs text-slate-400 block mt-1">per month (~2 videos/week)</span>
+              </div>
+
+              <ul class="space-y-3 text-xs text-slate-300">
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>Short-form Reels / Shorts / TikTok</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>Dynamic Subtitles & Sound Design</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>48-Hour Turnaround</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>2 Revision Rounds per video</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/5">
+              <a href="#contact" class="btn-wealth-secondary w-full py-3.5 text-center block text-xs font-bold uppercase tracking-wider">
+                Request Starter Quote →
+              </a>
+            </div>
+          </div>
+
+          <div class="wealth-card p-8 flex flex-col justify-between relative border-2 border-brand-orange wealth-card-active shadow-2xl shadow-orange-950/60 border-rotating-glow reveal-on-scroll stagger-2">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-orange text-black text-[10px] font-black uppercase tracking-widest shadow-lg">
+              ★ Recommended Plan
+            </div>
+
+            <div>
+              <span class="text-xs font-mono uppercase tracking-widest text-brand-amber block mb-2">Growth Cadence</span>
+              <h3 class="text-2xl font-bold text-white mb-2">Growth</h3>
+              <p class="text-xs text-slate-400 mb-6">For brands needing weekly consistency and serious organic momentum.</p>
+              
+              <div class="p-4 rounded-xl bg-brand-orange/15 border border-brand-orange/30 mb-6 text-center">
+                <span class="text-3xl font-black text-brand-amber font-mono">16 Videos</span>
+                <span class="text-xs text-slate-200 block mt-1">per month (~4 videos/week)</span>
+              </div>
+
+              <ul class="space-y-3 text-xs text-slate-200">
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>Short-Form & YouTube cuts supported</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>Advanced B-Roll & Motion Graphics</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>Fast 24-36h Delivery</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>Unlimited Minor Revisions</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>Dedicated Senior Editor</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-brand-orange/30">
+              <a href="#contact" class="btn-wealth w-full py-4 text-center block text-xs font-black uppercase tracking-wider shadow-2xl">
+                Get Growth Quote →
+              </a>
+            </div>
+          </div>
+
+          <div class="wealth-card p-8 flex flex-col justify-between reveal-on-scroll stagger-3">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-widest text-slate-400 block mb-2">High Volume</span>
+              <h3 class="text-2xl font-bold text-white mb-2">Scale</h3>
+              <p class="text-xs text-slate-400 mb-6">For content-heavy brands and active ad spenders.</p>
+              
+              <div class="p-4 rounded-xl bg-white/5 border border-white/5 mb-6 text-center">
+                <span class="text-3xl font-black text-white font-mono">30 Videos</span>
+                <span class="text-xs text-slate-400 block mt-1">per month (Daily posting cadence)</span>
+              </div>
+
+              <ul class="space-y-3 text-xs text-slate-300">
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>Daily Post Output Capability</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>Priority Queue & 24h Turnaround</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>Full Creative Direction & Hook Advisory</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-orange font-bold">✓</span>
+                  <span>Dedicated Post-Production Lead</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/5">
+              <a href="#contact" class="btn-wealth-secondary w-full py-3.5 text-center block text-xs font-bold uppercase tracking-wider">
+                Request Scale Quote →
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- INTERACTIVE VIDEO OUTPUT & ROI ESTIMATOR -->
+        <div class="mt-16 max-w-4xl mx-auto p-6 sm:p-8 rounded-3xl bg-dark-900 border border-white/10 shadow-2xl relative overflow-hidden reveal-on-scroll stagger-2">
+          <div class="absolute -right-20 -top-20 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-white/5 text-left">
+            <div>
+              <span class="text-[11px] font-mono uppercase tracking-widest text-brand-orange block mb-1">Custom Deliverable Calculator</span>
+              <h3 class="text-xl sm:text-2xl font-black text-white">Need a Custom Video Volume?</h3>
+              <p class="text-xs text-slate-400 mt-1">Drag the slider to calculate monthly capacity, hours saved, and turnaround time.</p>
+            </div>
+            <div class="text-right flex-shrink-0">
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block">Monthly Target</span>
+              <div class="flex items-baseline gap-1 justify-end">
+                <span id="calc-volume-display" class="text-4xl font-black text-brand-amber font-mono">16</span>
+                <span class="text-xs text-slate-300 font-bold uppercase">Videos / mo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Range Slider -->
+          <div class="py-6 text-left">
+            <div class="flex justify-between text-xs font-mono text-slate-400 mb-2">
+              <span>4 Videos (Boutique)</span>
+              <span>16 Videos (Weekly Cadence)</span>
+              <span>48 Videos (Omnichannel Scale)</span>
+            </div>
+            <input id="calc-volume-slider" type="range" min="4" max="48" step="2" value="16" class="w-full h-2.5 bg-dark-950 rounded-lg appearance-none cursor-pointer accent-[#FFA800] border border-white/10" />
+          </div>
+
+          <!-- Dynamic Output Metrics -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-left pt-2 pb-6">
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+              <span class="text-[10px] font-mono text-slate-400 uppercase block mb-1">⏱️ Hours Saved</span>
+              <span id="calc-hours-saved" class="text-xl sm:text-2xl font-black text-white font-mono">96 hrs</span>
+              <span class="text-[10px] text-slate-400 block mt-0.5">Off your calendar</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+              <span class="text-[10px] font-mono text-slate-400 uppercase block mb-1">⚡ Turnaround</span>
+              <span id="calc-turnaround" class="text-xl sm:text-2xl font-black text-white font-mono">24-48h</span>
+              <span class="text-[10px] text-emerald-400 block mt-0.5">Priority Queue</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+              <span class="text-[10px] font-mono text-slate-400 uppercase block mb-1">👤 Senior Editors</span>
+              <span id="calc-editors" class="text-xl sm:text-2xl font-black text-white font-mono">2 Dedicated</span>
+              <span class="text-[10px] text-slate-400 block mt-0.5">Assigned to brand</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+              <span class="text-[10px] font-mono text-slate-400 uppercase block mb-1">📈 Est. Reach Potential</span>
+              <span id="calc-reach" class="text-xl sm:text-2xl font-black text-brand-orange font-mono">350K+</span>
+              <span class="text-[10px] text-slate-400 block mt-0.5">Impressions/mo</span>
+            </div>
+          </div>
+
+          <!-- Lock In Button -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/5">
+            <span class="text-xs text-slate-400 text-left">
+              Includes unlimited minor revisions, sound design mastering & raw cloud backup.
+            </span>
+            <button id="calc-apply-btn" type="button" class="btn-wealth px-7 py-3 text-xs uppercase tracking-wider font-extrabold flex-shrink-0 shadow-xl">
+              Lock In This Volume For Quote →
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 11: TESTIMONIALS -->
+    <section class="py-24 bg-dark-900/60 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="max-w-3xl mx-auto mb-16 reveal-on-scroll">
+          <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-3 block">What Members Are Saying</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+            Client Validation
+          </h2>
+          <p class="text-slate-400 text-sm">
+            Feedback from international founders, content creators, and brand directors.
+          </p>
+        </div>
+
+        <!-- Continuous Dual-Row Left-to-Right Testimonials Stream (Wealth Portal Style) -->
+        <div class="relative overflow-hidden my-4 py-4 space-y-6 reveal-on-scroll stagger-1">
+          
+          <!-- Side Gradient Masks for Seamless Entry/Exit -->
+          <div class="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-44 bg-gradient-to-r from-dark-950 via-dark-950/85 to-transparent z-20"></div>
+          <div class="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-44 bg-gradient-to-l from-dark-950 via-dark-950/85 to-transparent z-20"></div>
+
+          <!-- ROW 1: Scrolling Left to Right (Speed 32s) -->
+          <div class="overflow-hidden w-full">
+            <div class="animate-slide-right flex gap-6" style="animation-duration: 32s !important;">
+              
+              <!-- CARD 1: Marcus Vance -->
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “Marketing Talk completely solved our content bottleneck. We went from struggling to release 2 videos a month to publishing 16 high-impact property reels every single month without missing a deadline.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80" alt="Marcus" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Marcus Vance</span>
+                      <span class="text-[10px] text-slate-400">Principal Broker • Vance Luxury Realty</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-orange bg-brand-orange/10 px-2 py-1 rounded">16 Reels/mo</span>
+                </div>
+              </div>
+
+              <!-- CARD 2: Julian Hayes -->
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “Their pacing and retention hooks are outstanding. Unlike other editors who just slap subtitles, Marketing Talk actually understands how to keep viewers watching all the way through.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80" alt="Julian" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Julian Hayes</span>
+                      <span class="text-[10px] text-slate-400">Founder • Executive Insights</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-amber bg-brand-amber/10 px-2 py-1 rounded">82% Retention</span>
+                </div>
+              </div>
+
+              <!-- CARD 3: Elena Rostova -->
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “Our Meta ads CPA dropped by 28% once we switched to Marketing Talk's creative cuts. They deliver fast, take feedback immediately, and feel like an internal team.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&auto=format&fit=crop&q=80" alt="Elena" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Elena Rostova</span>
+                      <span class="text-[10px] text-slate-400">Head of Growth • Lumina Skincare</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">4.1x ROAS</span>
+                </div>
+              </div>
+
+              <!-- CARD 4: Dr. David Sterling -->
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “We booked 85 high-ticket consultations directly from the cosmetic transformation reels. The subtle color grading and acoustic sound mastering make our clinic look ultra high-end.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=120&auto=format&fit=crop&q=80" alt="David" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Dr. David Sterling</span>
+                      <span class="text-[10px] text-slate-400">Director • Sterling Aesthetic Clinic</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-orange bg-brand-orange/10 px-2 py-1 rounded">85 Consults</span>
+                </div>
+              </div>
+
+              <!-- DUPLICATE ROW 1 FOR SEAMLESS 100% INFINITE LOOP -->
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “Marketing Talk completely solved our content bottleneck. We went from struggling to release 2 videos a month to publishing 16 high-impact property reels every single month without missing a deadline.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80" alt="Marcus" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Marcus Vance</span>
+                      <span class="text-[10px] text-slate-400">Principal Broker • Vance Luxury Realty</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-orange bg-brand-orange/10 px-2 py-1 rounded">16 Reels/mo</span>
+                </div>
+              </div>
+
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “Their pacing and retention hooks are outstanding. Unlike other editors who just slap subtitles, Marketing Talk actually understands how to keep viewers watching all the way through.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80" alt="Julian" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Julian Hayes</span>
+                      <span class="text-[10px] text-slate-400">Founder • Executive Insights</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-amber bg-brand-amber/10 px-2 py-1 rounded">82% Retention</span>
+                </div>
+              </div>
+
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “Our Meta ads CPA dropped by 28% once we switched to Marketing Talk's creative cuts. They deliver fast, take feedback immediately, and feel like an internal team.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&auto=format&fit=crop&q=80" alt="Elena" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Elena Rostova</span>
+                      <span class="text-[10px] text-slate-400">Head of Growth • Lumina Skincare</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">4.1x ROAS</span>
+                </div>
+              </div>
+
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “We booked 85 high-ticket consultations directly from the cosmetic transformation reels. The subtle color grading and acoustic sound mastering make our clinic look ultra high-end.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=120&auto=format&fit=crop&q=80" alt="David" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Dr. David Sterling</span>
+                      <span class="text-[10px] text-slate-400">Director • Sterling Aesthetic Clinic</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-orange bg-brand-orange/10 px-2 py-1 rounded">85 Consults</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ROW 2: Scrolling Left to Right (Speed 26s - Staggered) -->
+          <div class="overflow-hidden w-full">
+            <div class="animate-slide-right flex gap-6" style="animation-duration: 26s !important;">
+              
+              <!-- CARD 5: Kavita Patel -->
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “Over 14,000 course signups in 60 days. The animated diagrams and kinetic text retention triggers kept our short-form watch time above 85%. Best editing investment we made.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&auto=format&fit=crop&q=80" alt="Kavita" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Kavita Patel</span>
+                      <span class="text-[10px] text-slate-400">Founder • Mindshift Academy</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-amber bg-brand-amber/10 px-2 py-1 rounded">14K Signups</span>
+                </div>
+              </div>
+
+              <!-- CARD 6: Alex Mercer -->
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “Turning complex algorithmic trading concepts into 60-second viral explainers is hard. Marketing Talk nails the motion graphics and visual metaphors every single time.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&auto=format&fit=crop&q=80" alt="Alex" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Alex Mercer</span>
+                      <span class="text-[10px] text-slate-400">Co-Founder • AlphaFin Advisory</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">18% Inbound</span>
+                </div>
+              </div>
+
+              <!-- CARD 7: Liam O'Connor -->
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “65,000+ app installs on launch week! Their aggressive 1.5s hook variations completely eliminated ad fatigue. Turnaround is always under 48 hours without fail.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=120&auto=format&fit=crop&q=80" alt="Liam" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Liam O'Connor</span>
+                      <span class="text-[10px] text-slate-400">Growth Lead • TechPulse Mobile</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-orange bg-brand-orange/10 px-2 py-1 rounded">65K Installs</span>
+                </div>
+              </div>
+
+              <!-- CARD 8: Sarah Jenkins -->
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “I record raw podcasts for 40 minutes, drop them into Google Drive, and wake up to 12 ready-to-post LinkedIn and Reels clips. Saved me 20+ hours every single week.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&auto=format&fit=crop&q=80" alt="Sarah" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Sarah Jenkins</span>
+                      <span class="text-[10px] text-slate-400">Executive Coach • Elevate Leadership</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-amber bg-brand-amber/10 px-2 py-1 rounded">20h Saved/wk</span>
+                </div>
+              </div>
+
+              <!-- DUPLICATE ROW 2 FOR SEAMLESS 100% INFINITE LOOP -->
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “Over 14,000 course signups in 60 days. The animated diagrams and kinetic text retention triggers kept our short-form watch time above 85%. Best editing investment we made.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&auto=format&fit=crop&q=80" alt="Kavita" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Kavita Patel</span>
+                      <span class="text-[10px] text-slate-400">Founder • Mindshift Academy</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-amber bg-brand-amber/10 px-2 py-1 rounded">14K Signups</span>
+                </div>
+              </div>
+
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “Turning complex algorithmic trading concepts into 60-second viral explainers is hard. Marketing Talk nails the motion graphics and visual metaphors every single time.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&auto=format&fit=crop&q=80" alt="Alex" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Alex Mercer</span>
+                      <span class="text-[10px] text-slate-400">Co-Founder • AlphaFin Advisory</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">18% Inbound</span>
+                </div>
+              </div>
+
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “65,000+ app installs on launch week! Their aggressive 1.5s hook variations completely eliminated ad fatigue. Turnaround is always under 48 hours without fail.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=120&auto=format&fit=crop&q=80" alt="Liam" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Liam O'Connor</span>
+                      <span class="text-[10px] text-slate-400">Growth Lead • TechPulse Mobile</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-orange bg-brand-orange/10 px-2 py-1 rounded">65K Installs</span>
+                </div>
+              </div>
+
+              <div class="wealth-card p-6 flex flex-col justify-between w-[340px] sm:w-[410px] flex-shrink-0 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg text-left">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="text-amber-400 text-xs font-mono tracking-widest">★★★★★</div>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verified Client</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-5">
+                    “I record raw podcasts for 40 minutes, drop them into Google Drive, and wake up to 12 ready-to-post LinkedIn and Reels clips. Saved me 20+ hours every single week.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3.5 border-t border-white/5">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&auto=format&fit=crop&q=80" alt="Sarah" class="w-9 h-9 rounded-full object-cover border border-white/20 flex-shrink-0" />
+                    <div>
+                      <span class="text-xs font-bold text-white block">Sarah Jenkins</span>
+                      <span class="text-[10px] text-slate-400">Executive Coach • Elevate Leadership</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold text-brand-amber bg-brand-amber/10 px-2 py-1 rounded">20h Saved/wk</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- SECTION 12: FAQ -->
+    <section id="faqs" class="py-24 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="mb-12 reveal-on-scroll">
+          <a href="#contact" class="btn-wealth px-8 py-2.5 text-xs uppercase tracking-widest font-black mb-8 inline-block shadow-lg">
+            Join Waitlist
+          </a>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-slate-400 text-sm">
+            Everything you need to know about our editing workflow and deliverables.
+          </p>
+        </div>
+
+        <div class="space-y-3 text-left">
+          
+          <div class="faq-item wealth-card overflow-hidden reveal-on-scroll stagger-1">
+            <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-sm font-bold text-white hover:text-brand-amber transition-colors">
+              <span>Do you provide raw footage or do we supply it?</span>
+              <span class="faq-icon text-brand-orange text-lg transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content px-6 pb-4 text-xs text-slate-400 leading-relaxed hidden">
+              You record and supply the raw footage (from your phone, camera, or podcast setup). We handle 100% of post-production: trimming, hooks, B-roll sourcing, audio leveling, subtitles, and final exports.
+            </div>
+          </div>
+
+          <div class="faq-item wealth-card overflow-hidden reveal-on-scroll stagger-2">
+            <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-sm font-bold text-white hover:text-brand-amber transition-colors">
+              <span>Can you match our existing brand and editing style?</span>
+              <span class="faq-icon text-brand-orange text-lg transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content px-6 pb-4 text-xs text-slate-400 leading-relaxed hidden">
+              Yes, absolutely. During onboarding, we study your typography, brand hex codes, animation preferences, and pacing examples so your videos stay 100% on-brand.
+            </div>
+          </div>
+
+          <div class="faq-item wealth-card overflow-hidden reveal-on-scroll stagger-3">
+            <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-sm font-bold text-white hover:text-brand-amber transition-colors">
+              <span>Do you provide animated captions and subtitles?</span>
+              <span class="faq-icon text-brand-orange text-lg transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content px-6 pb-4 text-xs text-slate-400 leading-relaxed hidden">
+              Yes, custom kinetic subtitles with emoji accents, highlights, and custom fonts are included standard with all plans.
+            </div>
+          </div>
+
+          <div class="faq-item wealth-card overflow-hidden reveal-on-scroll stagger-4">
+            <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-sm font-bold text-white hover:text-brand-amber transition-colors">
+              <span>How long does editing typically take?</span>
+              <span class="faq-icon text-brand-orange text-lg transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content px-6 pb-4 text-xs text-slate-400 leading-relaxed hidden">
+              Standard turnaround is 24 to 48 hours for short-form content. For longer YouTube episodes, standard turnaround is 48 to 72 hours.
+            </div>
+          </div>
+
+          <div class="faq-item wealth-card overflow-hidden reveal-on-scroll stagger-5">
+            <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-sm font-bold text-white hover:text-brand-amber transition-colors">
+              <span>How many revisions are included?</span>
+              <span class="faq-icon text-brand-orange text-lg transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content px-6 pb-4 text-xs text-slate-400 leading-relaxed hidden">
+              All plans include revision rounds. We tweak until you are 100% satisfied with the outcome before publishing.
+            </div>
+          </div>
+
+          <div class="faq-item wealth-card overflow-hidden reveal-on-scroll stagger-6">
+            <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-sm font-bold text-white hover:text-brand-amber transition-colors">
+              <span>Do you work with international clients?</span>
+              <span class="faq-icon text-brand-orange text-lg transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content px-6 pb-4 text-xs text-slate-400 leading-relaxed hidden">
+              Yes, majority of our clients are based in the US, UK, Canada, Australia, and UAE. We manage communications and delivery seamlessly across international time zones.
+            </div>
+          </div>
+
+          <div class="faq-item wealth-card overflow-hidden reveal-on-scroll stagger-7">
+            <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-sm font-bold text-white hover:text-brand-amber transition-colors">
+              <span>How do we send you our footage?</span>
+              <span class="faq-icon text-brand-orange text-lg transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content px-6 pb-4 text-xs text-slate-400 leading-relaxed hidden">
+              We provide you with a dedicated shared Google Drive, Dropbox folder, or Frame.io project workspace. Just drag and drop your footage.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 13: FINAL CTA & CONTACT FORM -->
+    <section id="contact" class="py-24 bg-dark-900/60 border-t border-white/5 relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="wealth-card p-8 sm:p-12 border-2 border-brand-orange wealth-card-active shadow-2xl relative reveal-on-scroll">
+          
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-2 block">Take The Next Step</span>
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+              Ready to Turn Your Footage Into Better Content?
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base">
+              Tell us what you're creating, how much content you need and what you're looking for. We'll recommend the right editing plan for you.
+            </p>
+          </div>
+
+          <form id="quote-form" class="space-y-5">
+            <input type="hidden" id="tracking-source" name="source" value="direct" />
+            <input type="hidden" id="tracking-industry" name="industry" value="general" />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">Your Name *</label>
+                <input type="text" required placeholder="Alex Morgan" class="w-full px-4 py-3 rounded-xl bg-dark-950 border border-white/10 text-white text-sm focus:outline-none focus:border-brand-orange transition-colors" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">Email Address *</label>
+                <input type="email" required placeholder="alex@company.com" class="w-full px-4 py-3 rounded-xl bg-dark-950 border border-white/10 text-white text-sm focus:outline-none focus:border-brand-orange transition-colors" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">Company / Brand Name</label>
+                <input type="text" placeholder="Apex Growth Media" class="w-full px-4 py-3 rounded-xl bg-dark-950 border border-white/10 text-white text-sm focus:outline-none focus:border-brand-orange transition-colors" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">Website or Instagram Handle</label>
+                <input type="text" placeholder="@yourhandle or domain.com" class="w-full px-4 py-3 rounded-xl bg-dark-950 border border-white/10 text-white text-sm focus:outline-none focus:border-brand-orange transition-colors" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">What do you need edited? *</label>
+                <select required class="w-full px-4 py-3 rounded-xl bg-dark-950 border border-white/10 text-white text-sm focus:outline-none focus:border-brand-orange transition-colors">
+                  <option value="" disabled selected>Select primary format</option>
+                  <option value="reels">Short-Form Reels & TikToks</option>
+                  <option value="youtube">YouTube Long-Form Videos</option>
+                  <option value="paid-ads">Paid Ad Creatives (Meta/TikTok)</option>
+                  <option value="real-estate">Real Estate Walkthroughs</option>
+                  <option value="personal-brand">Personal Brand / Podcast Clips</option>
+                  <option value="mix">Mix of Formats</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">Approx. Monthly Video Volume *</label>
+                <select required class="w-full px-4 py-3 rounded-xl bg-dark-950 border border-white/10 text-white text-sm focus:outline-none focus:border-brand-orange transition-colors">
+                  <option value="" disabled selected>Select monthly volume</option>
+                  <option value="8">Starter (~8 videos / month)</option>
+                  <option value="16">Growth (~16 videos / month)</option>
+                  <option value="30">Scale (~30 videos / month)</option>
+                  <option value="custom">Custom / One-off Project</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <button type="submit" class="btn-wealth w-full py-4 text-xs sm:text-sm uppercase tracking-wider font-black shadow-2xl">
+                GET YOUR FREE VIDEO EDITING QUOTE →
+              </button>
+            </div>
+
+            <div id="form-feedback" class="hidden p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-center text-xs font-medium">
+              ✓ Thank you! We received your request. A senior video producer will review your requirements and send a customized quote within 12 hours.
+            </div>
+
+            <p class="text-[11px] text-center text-slate-500">
+              No pressure or spam. We review your footage specifications and provide a tailored plan.
+            </p>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-12 bg-dark-950 border-t border-white/5 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-6 h-6 rounded bg-brand-orange flex items-center justify-center text-black font-black text-[10px]">MT</div>
+        <span class="text-slate-300 font-bold tracking-tight">Marketing Talk Studio</span>
+        <span>• Professional Post-Production</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#work" class="hover:text-white transition-colors">Portfolio</a>
+        <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+        <a href="#faqs" class="hover:text-white transition-colors">FAQs</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <div>
+        © 2026 Marketing Talk. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING VERTICAL SIDE NAVIGATION INDICATOR (Adymize Exact Feature) -->
+  <nav id="floating-side-nav" class="fixed right-5 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col items-center gap-3 p-2.5 rounded-full bg-dark-900/85 backdrop-blur-xl border border-white/10 shadow-2xl transition-all duration-300 pointer-events-auto">
+    <a href="#hero" class="side-nav-dot active" data-section="hero" aria-label="Hero Section">
+      <span class="side-nav-tooltip">Overview</span>
+    </a>
+    <a href="#problem" class="side-nav-dot" data-section="problem" aria-label="The Problem">
+      <span class="side-nav-tooltip">The Problem</span>
+    </a>
+    <a href="#formats" class="side-nav-dot" data-section="formats" aria-label="Formats & Services">
+      <span class="side-nav-tooltip">Formats</span>
+    </a>
+    <a href="#work" class="side-nav-dot" data-section="work" aria-label="Portfolio Work">
+      <span class="side-nav-tooltip">Portfolio</span>
+    </a>
+    <a href="#proof" class="side-nav-dot" data-section="proof" aria-label="Client Proof & Stats">
+      <span class="side-nav-tooltip">Proof</span>
+    </a>
+    <a href="#comparison" class="side-nav-dot" data-section="comparison" aria-label="Before vs After">
+      <span class="side-nav-tooltip">Before/After</span>
+    </a>
+    <a href="#process" class="side-nav-dot" data-section="process" aria-label="4-Step Process">
+      <span class="side-nav-tooltip">Workflow</span>
+    </a>
+    <a href="#pricing" class="side-nav-dot" data-section="pricing" aria-label="Pricing Packages">
+      <span class="side-nav-tooltip">Pricing & ROI</span>
+    </a>
+    <a href="#faqs" class="side-nav-dot" data-section="faqs" aria-label="FAQs">
+      <span class="side-nav-tooltip">FAQs</span>
+    </a>
+    <a href="#contact" class="side-nav-dot" data-section="contact" aria-label="Contact & Quote">
+      <span class="side-nav-tooltip">Get Quote</span>
+    </a>
+  </nav>
+
+  <!-- MOBILE STICKY BOTTOM QUICK CTA -->
+  <div id="mobile-sticky-cta" class="fixed bottom-4 left-4 right-4 z-40 md:hidden translate-y-24 opacity-0 transition-all duration-300">
+    <a href="#contact" class="btn-wealth w-full py-3.5 px-6 rounded-full flex items-center justify-between text-xs font-black uppercase tracking-wider shadow-2xl">
+      <span>Get Free Editing Quote</span>
+      <span class="text-sm">→</span>
+    </a>
+  </div>
+
+  <!-- INTERACTIVE VIDEO PREVIEW MODAL -->
+  <div id="video-modal" class="fixed inset-0 z-50 bg-dark-950/95 backdrop-blur-2xl hidden items-center justify-center p-4 sm:p-6">
+    <div class="relative w-full max-w-4xl bg-dark-900 rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-orange-950/50">
+      
+      <div class="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-dark-950/50">
+        <div>
+          <h3 id="modal-video-title" class="text-sm font-bold text-white">Video Preview</h3>
+          <p id="modal-video-subtitle" class="text-[11px] text-brand-amber font-mono">Category • Format</p>
+        </div>
+        <button id="close-modal-btn" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-white/5 transition-colors" aria-label="Close modal">
+          ✕
+        </button>
+      </div>
+
+      <div class="aspect-video bg-black relative flex items-center justify-center">
+        <video id="modal-video-element" class="w-full h-full object-contain" controls autoplay playsinline preload="metadata">
+          <source src="" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+
+      <div class="px-6 py-4 bg-dark-950 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/5">
+        <span class="text-xs text-slate-400">Want similar edits for your brand?</span>
+        <a href="#contact" onclick="document.getElementById('close-modal-btn').click()" class="btn-wealth px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-wider">
+          Get a Quote for this Style →
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

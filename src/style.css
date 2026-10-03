@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #060608;
+  color: #F8FAFC;
+  overflow-x: hidden;
+  selection-background-color: #FF6A00;
+  selection-color: #000;
+}
+
+/* The Wealth Portal Signature Glowing Amber Button */
+.btn-wealth {
+  background: linear-gradient(180deg, #FFA726 0%, #FF5722 100%);
+  color: #0A0A0C;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 224, 178, 0.35);
+  box-shadow: 0 0 30px rgba(255, 106, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn-wealth:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 45px rgba(255, 106, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.btn-wealth-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.25s ease;
+}
+
+.btn-wealth-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 168, 0, 0.4);
+  color: #FFA800;
+  transform: translateY(-1px);
+}
+
+/* Wealth Portal Dark Cards & Panels */
+.wealth-card {
+  background: #0E0F14;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.wealth-card:hover {
+  border-color: rgba(255, 168, 0, 0.3);
+  box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 106, 0, 0.12);
+}
+
+.wealth-card-active {
+  background: linear-gradient(180deg, #161720 0%, #0D0E14 100%);
+  border: 1.5px solid #FF7A00;
+  box-shadow: 0 0 35px rgba(255, 106, 0, 0.25);
+}
+
+/* Floating Mosaic Thumbnails (Hero Wall) */
+.hero-thumb-wall {
+  position: absolute;
+  inset: -10% -5% -10% -5%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+  opacity: 0.18;
+  transform: perspective(1000px) rotateX(12deg) rotateY(-8deg) scale(1.1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-thumb-card {
+  aspect-ratio: 16/9;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #111;
+}
+
+.hero-thumb-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Circular Play Button Glowing */
+.wealth-play-btn {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.wealth-play-btn:hover {
+  background: #FF7A00;
+  border-color: #FFA800;
+  color: #000;
+  transform: scale(1.12);
+  box-shadow: 0 0 45px rgba(255, 106, 0, 0.7);
+}
+
+/* Discord Mockup Styling */
+.discord-ui {
+  background: #121318;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: 'Inter', sans-serif;
+  border-radius: 1.25rem;
+}
+
+/* Horizontal Carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Text Gradients */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFB74D 0%, #FF7043 50%, #FFA726 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060608;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F2029;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF7A00;
+}
+
+
+/* === THE WEALTH PORTAL EXACT REPLICATED ANIMATIONS === */
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes borderRotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.border-rotating-glow {
+  position: relative;
+  z-index: 1;
+}
+
+.border-rotating-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(from var(--angle), transparent 25%, rgba(255, 168, 0, 0.3) 45%, #FFA800 60%, #FF5500 78%, rgba(255, 168, 0, 0.3) 88%, transparent 100%);
+  border-radius: inherit;
+  z-index: -1;
+  animation: borderRotate 4.5s linear infinite;
+}
+
+.border-rotating-glow::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  background: conic-gradient(from var(--angle), transparent 35%, rgba(255, 168, 0, 0.75) 60%, #FF5500 78%, transparent 95%);
+  border-radius: inherit;
+  z-index: -2;
+  filter: blur(14px);
+  opacity: 0.75;
+  animation: borderRotate 4.5s linear infinite;
+}
+
+/* === Section 04: Format Cards Animated Border Beam & Side Laser Line === */
+.format-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 1.25rem;
+  background: #0B0F17 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 2px glowing rotating border line */
+.format-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(from var(--angle), transparent 25%, rgba(255, 168, 0, 0.3) 45%, #FFA800 60%, #FF5500 78%, rgba(255, 168, 0, 0.3) 88%, transparent 100%);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: borderRotate 4s linear infinite;
+  pointer-events: none;
+}
+
+/* Outer radiant neon halo spilling onto background */
+.format-card::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  background: conic-gradient(from var(--angle), transparent 35%, rgba(255, 168, 0, 0.8) 60%, #FF5500 78%, transparent 95%);
+  border-radius: inherit;
+  z-index: -2;
+  filter: blur(16px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: borderRotate 4s linear infinite;
+  pointer-events: none;
+}
+
+/* When active or hovered */
+.format-card.is-active::before,
+.format-card:hover::before {
+  opacity: 1;
+}
+
+.format-card.is-active::after,
+.format-card:hover::after {
+  opacity: 0.85;
+}
+
+.format-card.is-active,
+.format-card:hover {
+  transform: translateY(-5px);
+  border-color: transparent !important;
+  background: #0B0F17 !important;
+}
+
+.format-card.is-active p,
+.format-card:hover p {
+  color: #E2E8F0 !important;
+}
+
+.format-card.is-active span,
+.format-card:hover span {
+  color: #CBD5E1;
+}
+
+.format-card.is-active .text-brand-orange,
+.format-card:hover .text-brand-orange {
+  color: #FFA800 !important;
+}
+
+/* Top & Side Laser Beam Line sweeping across the card */
+.format-card .side-laser-beam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFA800, #FF5500, #FFA800, transparent);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.format-card.is-active .side-laser-beam,
+.format-card:hover .side-laser-beam {
+  opacity: 1;
+  animation: sideLaserBeam 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes sideLaserBeam {
+  0% { transform: translateX(-100%); }
+  50%, 100% { transform: translateX(100%); }
+}
+
+@keyframes gentleBounce {
+  0%, 100% { transform: translateY(0px); }
+  45%, 55% { transform: translateY(-3px); }
+}
+
+.animate-gentle-bounce {
+  animation: gentleBounce 3.5s ease-in-out infinite;
+}
+
+@keyframes textShine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.text-shimmer {
+  background: linear-gradient(90deg, #FFFFFF 0%, #FFB74D 35%, #FF7043 65%, #FFFFFF 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 5s linear infinite;
+}
+
+@keyframes blurryBallPulse {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+  50% { transform: scale(1.15) translate(10px, -15px); opacity: 0.65; }
+}
+
+.ambient-glow-orb {
+  animation: blurryBallPulse 7s ease-in-out infinite;
+}
+
+@keyframes verticalScroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.community-scroll-track {
+  animation: verticalScroll 22s linear infinite;
+}
+
+.community-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+/* Multi-column vertical proof wall animations (Up & Down like The Wealth Portal) */
+@keyframes scrollColUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollColDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+.animate-scroll-col-up {
+  display: flex !important;
+  flex-direction: column !important;
+  animation: scrollColUp 28s linear infinite !important;
+  will-change: transform;
+}
+
+.animate-scroll-col-down {
+  display: flex !important;
+  flex-direction: column !important;
+  animation: scrollColDown 32s linear infinite !important;
+  will-change: transform;
+}
+
+.animate-scroll-col-up:hover,
+.animate-scroll-col-down:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes imageReveal {
+  0% { opacity: 0; filter: blur(15px); transform: translateY(15px) scale(0.97); }
+  100% { opacity: 1; filter: blur(0px); transform: translateY(0px) scale(1); }
+}
+
+.reveal-on-mount {
+  animation: imageReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+@keyframes slideRightInfinite {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-slide-right {
+  display: flex;
+  width: max-content;
+  animation: slideRightInfinite 28s linear infinite;
+}
+
+.animate-slide-right:hover {
+  animation-play-state: paused;
+}
+
+
+/* Automatic infinite sliding animations (Left to Right) */
+@keyframes slideRightAuto {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-slide-right {
+  display: flex !important;
+  width: max-content !important;
+  animation: slideRightAuto 26s linear infinite !important;
+  will-change: transform;
+}
+
+.animate-slide-right:hover {
+  animation-play-state: paused !important;
+}
+
+.animate-carousel-slide {
+  display: flex !important;
+  width: max-content !important;
+  animation: slideRightAuto 24s linear infinite !important;
+  will-change: transform;
+}
+
+.animate-carousel-slide:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes slideLeftAuto {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-slide-left {
+  display: flex !important;
+  width: max-content !important;
+  animation: slideLeftAuto 28s linear infinite !important;
+  will-change: transform;
+}
+
+.animate-slide-left:hover {
+  animation-play-state: paused !important;
+}
+
+/* Live Interactive Discord Chat Typing & Dots */
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.15em;
+  background-color: #FFA800;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+  animation: cursorBlink 0.75s infinite;
+}
+
+@keyframes typingDots {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.3; }
+  40% { transform: scale(1.2); opacity: 1; }
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FFA800;
+  display: inline-block;
+  animation: typingDots 1.3s infinite ease-in-out both;
+}
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+.typing-dot:nth-child(3) { animation-delay: 0s; }
+
+/* 3D Glossy Icon Badges */
+.icon-badge-3d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.15rem;
+  background: linear-gradient(135deg, rgba(255, 168, 0, 0.16), rgba(255, 77, 0, 0.06));
+  border: 1px solid rgba(255, 168, 0, 0.35);
+  box-shadow: 
+    0 10px 25px -5px rgba(255, 168, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(8px);
+}
+
+.icon-badge-3d::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.35) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.icon-badge-3d svg {
+  filter: drop-shadow(0 4px 8px rgba(255, 168, 0, 0.45));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wealth-card:hover .icon-badge-3d,
+.process-step-card:hover .icon-badge-3d,
+.feature-card:hover .icon-badge-3d {
+  transform: translateY(-4px) scale(1.08) rotate(-2deg);
+  border-color: rgba(255, 168, 0, 0.7);
+  box-shadow: 
+    0 16px 32px -6px rgba(255, 168, 0, 0.4),
+    0 0 20px rgba(255, 168, 0, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.wealth-card:hover .icon-badge-3d svg,
+.process-step-card:hover .icon-badge-3d svg,
+.feature-card:hover .icon-badge-3d svg {
+  transform: scale(1.12) rotate(4deg);
+}
+
+/* Floating animation for 3D elements */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* Scroll-Driven Reveal & Lazy Entrance Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Entrance Delays for Cards */
+.stagger-1 { transition-delay: 0.06s; }
+.stagger-2 { transition-delay: 0.12s; }
+.stagger-3 { transition-delay: 0.18s; }
+.stagger-4 { transition-delay: 0.24s; }
+.stagger-5 { transition-delay: 0.30s; }
+.stagger-6 { transition-delay: 0.36s; }
+.stagger-7 { transition-delay: 0.42s; }
+.stagger-8 { transition-delay: 0.48s; }
+
+/* Floating Vertical Side Navigation Indicator (Adymize Exact Feature) */
+.side-nav-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.side-nav-dot:hover {
+  background: rgba(255, 168, 0, 0.7);
+  transform: scale(1.3);
+}
+
+.side-nav-dot.active {
+  background: #FFA800;
+  height: 22px;
+  box-shadow: 0 0 12px rgba(255, 168, 0, 0.8);
+}
+
+.side-nav-tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(13, 17, 23, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.side-nav-dot:hover .side-nav-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Animated Connecting Laser Timeline Pipeline */
+@keyframes timelineLaserPulse {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(50%); }
+  100% { transform: translateX(200%); }
+}
+
+.timeline-laser-pulse {
+  animation: timelineLaserPulse 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  filter: blur(1px);
+}
+
+/* Process Ultra Cards */
+.process-card-ultra {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  position: relative;
+}
+
+.process-card-ultra:hover {
+  transform: translateY(-8px);
+}
+
+.process-card-ultra::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--card-accent, #FFA800), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.process-card-ultra:hover::before {
+  opacity: 1;
+}
+
+/* 3D Process Mega Icons */
+.icon-badge-3d-step {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 1.25rem;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 
+    0 12px 28px -6px var(--glow-color, rgba(255, 168, 0, 0.25)),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.icon-badge-3d-step::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.45) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.icon-badge-3d-step svg {
+  width: 2rem;
+  height: 2rem;
+  filter: drop-shadow(0 4px 10px var(--glow-color, rgba(255, 168, 0, 0.5)));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.process-card-ultra:hover .icon-badge-3d-step {
+  transform: translateY(-4px) scale(1.1) rotate(-3deg);
+  box-shadow: 
+    0 20px 40px -8px var(--glow-color, rgba(255, 168, 0, 0.5)),
+    0 0 25px var(--glow-color, rgba(255, 168, 0, 0.35)),
+    inset 0 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+.process-card-ultra:hover .icon-badge-3d-step svg {
+  transform: scale(1.15) rotate(4deg);
+}
+
+/* Micro-deliverable Chips */
+.deliverable-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.32rem 0.65rem;
+  border-radius: 0.5rem;
+  font-size: 0.72rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #94a3b8;
+  transition: all 0.25s ease;
+}
+
+.process-card-ultra:hover .deliverable-chip {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #f1f5f9;
+}
+
+
+

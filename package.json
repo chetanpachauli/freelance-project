@@ -1,0 +1,22 @@
+{
+  "name": "marketing-talk-landing-page",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "puppeteer-core": "^25.12.0",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.3.1"
+  },
+  "dependencies": {
+    "lucide": "^0.395.0",
+    "three": "^0.186.1"
+  }
+}
