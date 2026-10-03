@@ -584,7 +584,7 @@ function initMobileMenu() {
   });
 }
 
-// 5. Lead Form with Visual Confirmation
+// 5. Lead Form with Instant WhatsApp Lead Dispatch (+91 8218102253)
 function initLeadForm() {
   const form = document.getElementById('quote-form');
   const formFeedback = document.getElementById('form-feedback');
@@ -592,47 +592,98 @@ function initLeadForm() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const nameInput = document.getElementById('quote-name');
+    const emailInput = document.getElementById('quote-email');
+    const companyInput = document.getElementById('quote-company');
+    const handleInput = document.getElementById('quote-handle');
+    const formatSelect = document.getElementById('quote-format');
+    const volumeSelect = document.getElementById('quote-volume');
+
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const company = companyInput && companyInput.value.trim() ? companyInput.value.trim() : 'Not provided';
+    const handle = handleInput && handleInput.value.trim() ? handleInput.value.trim() : 'Not provided';
+    const formatText = formatSelect && formatSelect.selectedIndex >= 0 ? formatSelect.options[formatSelect.selectedIndex].text : 'General Inquiry';
+    const volumeText = volumeSelect && volumeSelect.selectedIndex >= 0 ? volumeSelect.options[volumeSelect.selectedIndex].text : 'Flexible';
+
     const btn = form.querySelector('button[type="submit"]');
     const originalText = btn.innerHTML;
 
-    btn.innerHTML = `<span class="inline-flex items-center gap-2"><svg class="animate-spin w-4 h-4" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg> Generating Quote Proposal...</span>`;
+    btn.innerHTML = `<span class="inline-flex items-center gap-2"><svg class="animate-spin w-4 h-4" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg> Connecting to WhatsApp...</span>`;
     btn.disabled = true;
 
+    // Build the formatted WhatsApp message for +91 8218102253
+    const waLines = [
+      `👋 *Hi Marketing Talk! I need a Video Editing Quote:*`,
+      ``,
+      `👤 *Client Name:* ${name}`,
+      `📧 *Email:* ${email}`,
+      `🏢 *Company / Brand:* ${company}`,
+      `📱 *Instagram / Handle:* ${handle}`,
+      `🎬 *Editing Format:* ${formatText}`,
+      `📦 *Monthly Volume:* ${volumeText}`,
+      ``,
+      `Looking forward to receiving the quote proposal!`
+    ];
+
+    const waText = encodeURIComponent(waLines.join('\n'));
+    const waUrl = `https://wa.me/918218102253?text=${waText}`;
+
+    if (formFeedback) {
+      formFeedback.innerHTML = `✓ <strong>Connecting to WhatsApp!</strong> If chat did not open automatically, <a href="${waUrl}" target="_blank" class="underline font-bold text-white hover:text-emerald-200">click here to send on WhatsApp ↗</a>`;
+      formFeedback.classList.remove('hidden');
+    }
+
     setTimeout(() => {
-      form.reset();
       btn.innerHTML = originalText;
       btn.disabled = false;
-      if (formFeedback) {
-        formFeedback.classList.remove('hidden');
-        setTimeout(() => {
-          formFeedback.classList.add('hidden');
-        }, 6000);
+
+      // Open WhatsApp chat directly
+      const opened = window.open(waUrl, '_blank');
+      if (!opened) {
+        window.location.href = waUrl;
       }
-    }, 1200);
+    }, 700);
   });
 }
 
-// 6. Scroll Effects & Sticky Bottom Bar
+// 6. Scroll Effects, Sticky Bottom Bar & Floating Contact Visibility
 function initScrollEffects() {
   const stickyBar = document.getElementById('mobile-sticky-cta');
+  const quickActions = document.getElementById('floating-quick-actions');
   const contactSection = document.getElementById('contact');
-  if (!stickyBar) return;
+  if (!stickyBar && !quickActions) return;
 
-  function updateStickyBar() {
+  function updateScrollWidgets() {
     const contactRect = contactSection ? contactSection.getBoundingClientRect() : null;
     const isNearContact = contactRect && contactRect.top < window.innerHeight * 0.75;
 
-    if (window.scrollY > 400 && !isNearContact) {
-      stickyBar.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
-      stickyBar.classList.add('translate-y-0', 'opacity-100');
-    } else {
-      stickyBar.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
-      stickyBar.classList.remove('translate-y-0', 'opacity-100');
+    // Mobile sticky quote CTA bar
+    if (stickyBar) {
+      if (window.scrollY > 400 && !isNearContact) {
+        stickyBar.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+        stickyBar.classList.add('translate-y-0', 'opacity-100');
+      } else {
+        stickyBar.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+        stickyBar.classList.remove('translate-y-0', 'opacity-100');
+      }
+    }
+
+    // Floating WhatsApp & Call Buttons: fade out when reaching contact form to prevent UI clash
+    if (quickActions) {
+      if (isNearContact) {
+        quickActions.classList.add('opacity-0', 'pointer-events-none', 'scale-90');
+        quickActions.classList.remove('opacity-100', 'scale-100');
+      } else {
+        quickActions.classList.remove('opacity-0', 'pointer-events-none', 'scale-90');
+        quickActions.classList.add('opacity-100', 'scale-100');
+      }
     }
   }
 
-  window.addEventListener('scroll', updateStickyBar, { passive: true });
-  updateStickyBar();
+  window.addEventListener('scroll', updateScrollWidgets, { passive: true });
+  updateScrollWidgets();
 }
 
 // 7. Outreach URL Parameters Tracking (?source=instagram&industry=real-estate)
