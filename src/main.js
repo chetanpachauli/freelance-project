@@ -387,7 +387,7 @@ function initPortfolio() {
               ${col1Cards}
             </div>
           </div>
-          <div class="overflow-hidden relative h-full">
+          <div class="hidden md:block overflow-hidden relative h-full">
             <div class="animate-scroll-col-down flex flex-col gap-6">
               ${col2Cards}
             </div>
@@ -563,9 +563,13 @@ function initMobileMenu() {
 
   function toggleDrawer(open) {
     if (open) {
-      menu.classList.remove('translate-x-full');
+      menu.classList.remove('translate-x-full', 'invisible');
+      menu.classList.add('translate-x-0', 'visible');
+      document.body.style.overflow = 'hidden';
     } else {
-      menu.classList.add('translate-x-full');
+      menu.classList.add('translate-x-full', 'invisible');
+      menu.classList.remove('translate-x-0', 'visible');
+      document.body.style.overflow = '';
     }
   }
 
@@ -607,17 +611,24 @@ function initLeadForm() {
 // 6. Scroll Effects & Sticky Bottom Bar
 function initScrollEffects() {
   const stickyBar = document.getElementById('mobile-sticky-cta');
+  const contactSection = document.getElementById('contact');
   if (!stickyBar) return;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 450) {
-      stickyBar.classList.remove('translate-y-24', 'opacity-0');
+  function updateStickyBar() {
+    const contactRect = contactSection ? contactSection.getBoundingClientRect() : null;
+    const isNearContact = contactRect && contactRect.top < window.innerHeight * 0.75;
+
+    if (window.scrollY > 400 && !isNearContact) {
+      stickyBar.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
       stickyBar.classList.add('translate-y-0', 'opacity-100');
     } else {
-      stickyBar.classList.add('translate-y-24', 'opacity-0');
+      stickyBar.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
       stickyBar.classList.remove('translate-y-0', 'opacity-100');
     }
-  });
+  }
+
+  window.addEventListener('scroll', updateStickyBar, { passive: true });
+  updateStickyBar();
 }
 
 // 7. Outreach URL Parameters Tracking (?source=instagram&industry=real-estate)

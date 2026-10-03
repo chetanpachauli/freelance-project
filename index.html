@@ -11,9 +11,9 @@
 <body class="bg-dark-950 text-slate-100 antialiased selection:bg-brand-orange selection:text-black relative">
 
   <!-- Ambient Golden & Amber Background Spotlights -->
-  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[850px] h-[500px] bg-brand-orange/10 rounded-full blur-[180px] pointer-events-none -z-10 ambient-glow-orb"></div>
-  <div class="fixed top-1/3 -left-32 w-[600px] h-[600px] bg-brand-amber/5 rounded-full blur-[160px] pointer-events-none -z-10 ambient-glow-orb"></div>
-  <div class="fixed bottom-1/4 -right-32 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[350px] sm:w-[850px] h-[350px] sm:h-[500px] bg-brand-orange/10 rounded-full blur-[120px] sm:blur-[180px] pointer-events-none -z-10 ambient-glow-orb overflow-hidden"></div>
+  <div class="fixed top-1/3 -left-32 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-brand-amber/5 rounded-full blur-[100px] sm:blur-[160px] pointer-events-none -z-10 ambient-glow-orb overflow-hidden"></div>
+  <div class="fixed bottom-1/4 -right-32 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-blue-600/5 rounded-full blur-[100px] sm:blur-[160px] pointer-events-none -z-10 overflow-hidden"></div>
   <!-- Ambient Cursor Spotlight Glow -->
   <div id="ambient-mouse-glow" class="fixed inset-0 pointer-events-none z-30 transition-opacity duration-700 opacity-60"></div>
 
@@ -66,7 +66,7 @@
   </header>
 
   <!-- Mobile Drawer Menu -->
-  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-dark-950/95 backdrop-blur-2xl flex flex-col p-6 translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-dark-950/98 backdrop-blur-2xl flex flex-col p-6 translate-x-full invisible transition-all duration-300 ease-in-out md:hidden overflow-y-auto">
     <div class="flex items-center justify-between pb-6 border-b border-slate-800">
       <div class="flex items-center gap-3">
         <div class="w-8 h-8 rounded-lg bg-brand-orange flex items-center justify-center text-black font-black">MT</div>
@@ -92,54 +92,54 @@
     </div>
   </div>
 
-  <main>
+  <main class="overflow-x-hidden w-full relative">
     <!-- SECTION 01: HERO SECTION -->
-    <section id="hero" class="relative pt-12 pb-24 md:pt-16 md:pb-36 overflow-hidden text-center">
+    <section id="hero" class="relative pt-8 pb-20 sm:pt-14 sm:pb-28 md:pt-16 md:pb-36 overflow-hidden text-center">
       <!-- Three.js 3D Background Canvas -->
       <canvas id="three-hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-60"></canvas>
       
       <div class="relative z-10">
-        <div class="inline-block mb-8 reveal-on-scroll stagger-1">
-        <a href="#contact" class="btn-wealth px-8 py-3 text-xs uppercase tracking-widest font-black shadow-2xl animate-gentle-bounce">
+        <div class="inline-block mb-6 sm:mb-8 reveal-on-scroll stagger-1">
+        <a href="#contact" class="btn-wealth px-6 py-2.5 sm:px-8 sm:py-3 text-[11px] sm:text-xs uppercase tracking-widest font-black shadow-2xl animate-gentle-bounce">
           Join Client Roster • Get Quote
         </a>
       </div>
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 mb-6 reveal-on-scroll stagger-2">
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08]">
+        <h1 class="text-3xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] sm:leading-[1.08]">
           Turn Your Raw Footage Into Content <br class="hidden sm:inline" />
           <span class="text-gradient-gold text-shimmer">People Want to Watch.</span>
         </h1>
-        <p class="text-slate-300 text-base sm:text-xl font-normal max-w-2xl mx-auto mt-6 leading-relaxed">
+        <p class="text-slate-300 text-sm sm:text-xl font-normal max-w-2xl mx-auto mt-4 sm:mt-6 leading-relaxed">
           Professional video editing for brands, creators and businesses — from short-form reels and social media content to ads, YouTube videos and more.
         </p>
       </div>
 
       <!-- Hero Video Showcase Container -->
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 relative mt-12 mb-10 reveal-on-scroll stagger-3">
-        <div class="relative wealth-card p-3 sm:p-5 border-white/10 shadow-2xl shadow-orange-950/40 bg-dark-900 group border-rotating-glow">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 relative mt-8 sm:mt-12 mb-10 reveal-on-scroll stagger-3">
+        <div class="relative wealth-card p-2 sm:p-5 border-white/10 shadow-2xl shadow-orange-950/40 bg-dark-900 group border-rotating-glow">
           <div class="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-black flex items-center justify-center">
             
-            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600&auto=format&fit=crop&q=80" alt="Showcase" class="w-full h-full object-cover opacity-85 group-hover:scale-102 transition-transform duration-700" loading="eager" />
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600&auto=format&fit=crop&q=80" alt="Showcase" class="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:scale-102 transition-transform duration-700" loading="eager" />
             <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-dark-950/20 to-transparent"></div>
 
             <button onclick="openVideoModal(1)" class="wealth-play-btn z-10" aria-label="Play 2026 Showreel">
-              <svg class="w-9 h-9 fill-current translate-x-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <svg class="w-6 h-6 sm:w-9 sm:h-9 fill-current translate-x-0.5 sm:translate-x-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </button>
 
-            <div class="absolute top-4 left-4 z-10 flex items-center gap-2">
-              <span class="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[11px] font-bold text-brand-amber border border-brand-amber/30 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+            <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 flex items-center gap-2">
+              <span class="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] sm:text-[11px] font-bold text-brand-amber border border-brand-amber/30 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-orange animate-pulse"></span>
                 2026 Production Showreel
               </span>
             </div>
 
-            <div class="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between text-left text-xs text-white bg-dark-950/80 backdrop-blur-md p-3.5 rounded-xl border border-white/10">
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-4 sm:left-4 sm:right-4 z-10 flex items-center justify-between text-left text-xs text-white bg-dark-950/85 backdrop-blur-md p-2.5 sm:p-3.5 rounded-xl border border-white/10">
               <div>
-                <span class="font-bold block text-sm">4K Master Cuts • Retention Engineered</span>
-                <span class="text-slate-400 text-xs">Used by creators, founders and agencies worldwide</span>
+                <span class="font-bold block text-xs sm:text-sm">4K Master Cuts • Retention Engineered</span>
+                <span class="text-slate-400 text-[11px] hidden sm:block">Used by creators, founders and agencies worldwide</span>
               </div>
-              <button onclick="openVideoModal(1)" class="btn-wealth px-4 py-2 text-[10px] uppercase font-bold tracking-wider">
+              <button onclick="openVideoModal(1)" class="btn-wealth px-3.5 py-1.5 sm:px-4 sm:py-2 text-[10px] uppercase font-bold tracking-wider flex-shrink-0">
                 Watch Reel
               </button>
             </div>
@@ -517,7 +517,7 @@
     </section>
 
     <!-- SECTION 04: WHAT WE EDIT (Content Formats Grid) -->
-    <section id="formats" class="py-24 relative">
+    <section id="formats" class="py-24 relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal-on-scroll">
@@ -894,21 +894,21 @@
 
                 <!-- Interactive Chat Input Bar with Typewriter Simulation & Glowing Send Button -->
                 <div class="mt-auto pt-2">
-                  <div class="bg-[#141620] rounded-full p-2 pl-5 border border-white/10 flex items-center justify-between focus-within:border-brand-amber/60 transition-all shadow-xl">
+                  <div class="bg-[#141620] rounded-full p-1.5 sm:p-2 pl-3.5 sm:pl-5 border border-white/10 flex items-center justify-between focus-within:border-brand-amber/60 transition-all shadow-xl min-w-0">
                     <input 
                       id="chat-typewriter-input" 
                       type="text" 
-                      placeholder="I'm still offering a bit of everything... is that bad?" 
-                      class="bg-transparent text-xs text-white placeholder-slate-500 outline-none w-full mr-3 font-medium tracking-wide" 
+                      placeholder="Ask about editing packages or speed..." 
+                      class="bg-transparent text-xs text-white placeholder-slate-500 outline-none w-full mr-2 sm:mr-3 font-medium tracking-wide min-w-0" 
                       autocomplete="off"
                     />
                     <button 
                       id="chat-send-btn" 
-                      class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#FF7A00] to-[#FFA800] text-black flex items-center justify-center flex-shrink-0 shadow-lg shadow-orange-500/50 hover:scale-105 active:scale-95 transition-all cursor-pointer group" 
+                      class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-[#FF7A00] to-[#FFA800] text-black flex items-center justify-center flex-shrink-0 shadow-lg shadow-orange-500/50 hover:scale-105 active:scale-95 transition-all cursor-pointer group" 
                       title="Send message"
                       aria-label="Send message"
                     >
-                      <svg class="w-4 h-4 fill-black translate-x-0.5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                      <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-black translate-x-0.5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
                         <polygon points="3 2 21 12 3 22 7 12 3 2"></polygon>
                       </svg>
                     </button>
@@ -1116,7 +1116,7 @@
             </div>
 
             <!-- COLUMN 2: Scrolling DOWN -->
-            <div class="overflow-hidden relative h-full">
+            <div class="hidden md:block overflow-hidden relative h-full">
               <div class="animate-scroll-col-down flex flex-col gap-6">
                 <!-- CARD 2.1: Meta & TikTok Ads 4.1x ROAS (Glowing Border) -->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-brand-orange/50 wealth-card-active shadow-xl">
@@ -1426,15 +1426,15 @@
           <div id="before-after-container" class="relative aspect-video rounded-2xl overflow-hidden border border-white/15 shadow-2xl select-none group cursor-ew-resize bg-dark-950">
             <!-- After Layer (Full 4K Graded Master Cut) -->
             <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600&auto=format&fit=crop&q=80" alt="Master Cut" class="absolute inset-0 w-full h-full object-cover filter saturate-125 contrast-110" />
-            <div class="absolute bottom-4 right-4 z-10 px-3.5 py-1.5 rounded-lg bg-dark-950/85 border border-brand-orange/40 text-brand-amber text-xs font-bold flex items-center gap-2 backdrop-blur-md shadow-lg">
-              <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span> AFTER: 4K Master Cut • Cinema Color Grade & Audio Polish
+            <div class="absolute bottom-2.5 right-2.5 sm:bottom-4 sm:right-4 z-10 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg bg-dark-950/85 border border-brand-orange/40 text-brand-amber text-[10px] sm:text-xs font-bold flex items-center gap-1.5 sm:gap-2 backdrop-blur-md shadow-lg">
+              <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-orange animate-pulse"></span> AFTER: 4K Master <span class="hidden sm:inline">• Cinema Grade</span>
             </div>
 
             <!-- Before Layer (Clipped Raw Camera Footage) -->
             <div id="before-image-clip" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-brand-orange shadow-2xl">
               <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600&auto=format&fit=crop&q=80" alt="Raw Footage" class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-75 brightness-75 blur-[0.4px]" style="max-width: none; width: 100%; height: 100%;" />
-              <div class="absolute bottom-4 left-4 z-10 px-3.5 py-1.5 rounded-lg bg-dark-950/85 border border-white/10 text-slate-400 text-xs font-bold flex items-center gap-2 backdrop-blur-md">
-                <span class="w-2 h-2 rounded-full bg-slate-500"></span> BEFORE: Flat Raw Mobile Clip
+              <div class="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 z-10 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg bg-dark-950/85 border border-white/10 text-slate-400 text-[10px] sm:text-xs font-bold flex items-center gap-1.5 sm:gap-2 backdrop-blur-md">
+                <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-slate-500"></span> BEFORE: Raw Clip
               </div>
             </div>
 
@@ -1882,10 +1882,10 @@
 
           <!-- Range Slider -->
           <div class="py-6 text-left">
-            <div class="flex justify-between text-xs font-mono text-slate-400 mb-2">
-              <span>4 Videos (Boutique)</span>
-              <span>16 Videos (Weekly Cadence)</span>
-              <span>48 Videos (Omnichannel Scale)</span>
+            <div class="flex justify-between text-[11px] sm:text-xs font-mono text-slate-400 mb-2">
+              <span>4 Videos <span class="hidden sm:inline">(Boutique)</span></span>
+              <span>16 Videos <span class="hidden sm:inline">(Weekly Cadence)</span></span>
+              <span>48 Videos <span class="hidden sm:inline">(Omnichannel Scale)</span></span>
             </div>
             <input id="calc-volume-slider" type="range" min="4" max="48" step="2" value="16" class="w-full h-2.5 bg-dark-950 rounded-lg appearance-none cursor-pointer accent-[#FFA800] border border-white/10" />
           </div>
@@ -2514,7 +2514,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="py-12 bg-dark-950 border-t border-white/5 text-xs text-slate-500">
+  <footer class="py-10 pb-28 sm:py-12 bg-dark-950 border-t border-white/5 text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
         <div class="w-6 h-6 rounded bg-brand-orange flex items-center justify-center text-black font-black text-[10px]">MT</div>
@@ -2570,16 +2570,16 @@
   </nav>
 
   <!-- MOBILE STICKY BOTTOM QUICK CTA -->
-  <div id="mobile-sticky-cta" class="fixed bottom-4 left-4 right-4 z-40 md:hidden translate-y-24 opacity-0 transition-all duration-300">
-    <a href="#contact" class="btn-wealth w-full py-3.5 px-6 rounded-full flex items-center justify-between text-xs font-black uppercase tracking-wider shadow-2xl">
+  <div id="mobile-sticky-cta" class="fixed bottom-4 left-4 right-4 z-40 md:hidden translate-y-24 opacity-0 pointer-events-none transition-all duration-300">
+    <a href="#contact" class="btn-wealth w-full py-3 px-5 rounded-full flex items-center justify-between text-xs font-black uppercase tracking-wider shadow-2xl">
       <span>Get Free Editing Quote</span>
       <span class="text-sm">→</span>
     </a>
   </div>
 
   <!-- INTERACTIVE VIDEO PREVIEW MODAL -->
-  <div id="video-modal" class="fixed inset-0 z-50 bg-dark-950/95 backdrop-blur-2xl hidden items-center justify-center p-4 sm:p-6">
-    <div class="relative w-full max-w-4xl bg-dark-900 rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-orange-950/50">
+  <div id="video-modal" class="fixed inset-0 z-50 bg-dark-950/95 backdrop-blur-2xl hidden items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="relative w-full max-w-4xl bg-dark-900 rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-orange-950/50 my-auto">
       
       <div class="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-dark-950/50">
         <div>
