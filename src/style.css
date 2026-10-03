@@ -742,5 +742,72 @@ body {
   color: #f1f5f9;
 }
 
+/* === Studio Animations Suite === */
+
+/* 1. Dynamic Audio Equalizer Wave Pulse */
+@keyframes audioWavePulse {
+  0%, 100% { height: 20%; }
+  50% { height: 95%; }
+}
+
+.eq-wave-bar {
+  animation: audioWavePulse 1.1s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+/* 2. 3D Card Perspective Tilt & Glare */
+.card-3d-wrapper {
+  perspective: 1000px;
+}
+
+.card-3d-tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+.card-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 168, 0, 0.18) 0%, rgba(255, 255, 255, 0.05) 30%, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.card-3d-tilt:hover .card-glare {
+  opacity: 1;
+}
+
+/* 3. Studio Timeline Custom Range Scrubber */
+.timeline-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #FFA800;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 10px rgba(255, 122, 0, 0.8);
+  cursor: grab;
+  transition: transform 0.1s ease;
+}
+
+.timeline-slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.25);
+}
+
+.timeline-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #FFA800;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 10px rgba(255, 122, 0, 0.8);
+  cursor: grab;
+}
+
 
 

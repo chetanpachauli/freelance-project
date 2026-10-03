@@ -134,6 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initLiveDiscordChat();
   initScrollReveal();
   initFloatingSideNav();
+  initStudioTimeline();
+  init3DTiltCards();
+  initTextScramble();
 });
 
 // 0.5. Format Cards Glowing Border Beam Sequential Highlight
@@ -1089,5 +1092,124 @@ function initFloatingSideNav() {
     const el = document.getElementById(id);
     if (el) sectionObserver.observe(el);
   });
+}
+
+// 15. Interactive Studio Precision Timeline Scrubber (Hollywood / Studio Feature)
+function initStudioTimeline() {
+  const slider = document.getElementById('studio-timeline-slider');
+  const playhead = document.getElementById('studio-playhead');
+  const tcDisplay = document.getElementById('timeline-timecode');
+  const phaseLabel = document.getElementById('timeline-phase-label');
+  const clipHook = document.getElementById('clip-hook');
+  const clipBroll = document.getElementById('clip-broll');
+  const clipPolish = document.getElementById('clip-polish');
+
+  if (!slider || !playhead) return;
+
+  function updateTimeline() {
+    const val = parseFloat(slider.value);
+    playhead.style.left = `${val}%`;
+
+    // Dynamic Timecode
+    const seconds = Math.floor(val * 0.6);
+    const frames = Math.floor((val * 1.6) % 30);
+    if (tcDisplay) {
+      tcDisplay.textContent = `TC 00:00:${String(seconds).padStart(2, '0')}:${String(frames).padStart(2, '0')}`;
+    }
+
+    // Highlight active clip based on scrub position
+    if (val < 35) {
+      if (phaseLabel) phaseLabel.textContent = "Phase 1: 1.5s Hook Cut & Pattern Interrupt";
+      if (clipHook) clipHook.style.boxShadow = "0 0 16px rgba(255, 106, 0, 0.4)";
+      if (clipBroll) clipBroll.style.boxShadow = "none";
+      if (clipPolish) clipPolish.style.boxShadow = "none";
+    } else if (val < 70) {
+      if (phaseLabel) phaseLabel.textContent = "Phase 2: Dynamic B-Roll & Visual Pacing";
+      if (clipHook) clipHook.style.boxShadow = "none";
+      if (clipBroll) clipBroll.style.boxShadow = "0 0 16px rgba(6, 182, 212, 0.4)";
+      if (clipPolish) clipPolish.style.boxShadow = "none";
+    } else {
+      if (phaseLabel) phaseLabel.textContent = "Phase 3: 4K Master Grade & 48kHz Sound Design";
+      if (clipHook) clipHook.style.boxShadow = "none";
+      if (clipBroll) clipBroll.style.boxShadow = "none";
+      if (clipPolish) clipPolish.style.boxShadow = "0 0 16px rgba(16, 185, 129, 0.4)";
+    }
+  }
+
+  slider.addEventListener('input', updateTimeline);
+  slider.addEventListener('touchmove', updateTimeline, { passive: true });
+  updateTimeline();
+}
+
+// 16. 3D Card Perspective Tilt & Reflective Glare
+function init3DTiltCards() {
+  const cards = document.querySelectorAll('.card-3d-tilt');
+  if (!cards.length) return;
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * -7;
+      const rotateY = ((x - centerX) / centerX) * 7;
+
+      card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+      card.style.setProperty('--mouse-x', `${(x / rect.width) * 100}%`);
+      card.style.setProperty('--mouse-y', `${(y / rect.height) * 100}%`);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = `perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+    });
+  });
+}
+
+// 17. Kinetic Text Scramble / Cipher Decryption on Scroll
+function initTextScramble() {
+  const elements = document.querySelectorAll('[data-scramble="true"]');
+  if (!elements.length) return;
+
+  const chars = "!<>-_\\/[]{}—=+*^?#_$%~";
+
+  function scramble(el) {
+    const originalText = el.getAttribute('data-original-text') || el.innerText.trim();
+    el.setAttribute('data-original-text', originalText);
+    let iteration = 0;
+    const maxIterations = originalText.length;
+
+    const interval = setInterval(() => {
+      el.innerText = originalText
+        .split('')
+        .map((char, index) => {
+          if (char === ' ') return ' ';
+          if (index < iteration) {
+            return originalText[index];
+          }
+          return chars[Math.floor(Math.random() * chars.length)];
+        })
+        .join('');
+
+      if (iteration >= maxIterations) {
+        clearInterval(interval);
+        el.innerText = originalText;
+      }
+      iteration += 1 / 2;
+    }, 28);
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        scramble(entry.target);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  elements.forEach(el => observer.observe(el));
 }
 
