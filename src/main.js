@@ -1,115 +1,187 @@
 import * as THREE from 'three';
 import { createIcons, Play, Check, ChevronDown, Plus, ArrowRight, Menu, X, Video, Star, Sparkles } from 'lucide';
 
-// Portfolio Dataset across all industries requested in the PDF Brief
+// Portfolio Dataset with Client's 100% Web-Optimized Compressed Videos (All under 25 MB!)
 const portfolioData = [
   {
     id: 1,
-    title: "Luxury Penthouse Cinematic Walkthrough",
+    title: "Luxury Modern Villa & Penthouse Walkthrough",
     category: "real-estate",
     categoryName: "Real Estate",
-    format: "Short-Form Reel",
-    thumbnail: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&auto=format&fit=crop&q=80",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-modern-apartment-interior-living-room-41974-large.mp4",
-    duration: "0:42",
+    format: "Cinematic 4K Walkthrough",
+    thumbnail: "/thumbnails/la-real-estate-edit.jpg",
+    videoUrl: "/videos/la-real-estate-edit.mp4",
+    duration: "1:35",
     result: "420K+ Views on IG Reels",
-    client: "Prestige Prime Realty"
+    client: "Prestige Luxury Living"
   },
   {
     id: 2,
-    title: "CEO Personal Brand Breakdown: Building Wealth",
+    title: "CEO & Founder Authority: Scaling High-Ticket Brands",
     category: "personal-brand",
     categoryName: "Personal Brand",
     format: "Talking Head + Fast B-Roll",
-    thumbnail: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-man-working-on-a-laptop-42999-large.mp4",
-    duration: "0:58",
+    thumbnail: "/thumbnails/andrew-reel.jpg",
+    videoUrl: "/videos/andrew-reel.mp4",
+    duration: "0:51",
     result: "3.2x Engagement Spike",
-    client: "Alex V. (Founder & Angel Investor)"
+    client: "Andrew (Founder & Investor)"
   },
   {
     id: 3,
-    title: "Algorithmic Trading Explained in 60 Seconds",
-    category: "finance",
-    categoryName: "Finance",
+    title: "Animated High-Conversion Explainer Blueprint",
+    category: "education",
+    categoryName: "Education",
     format: "Motion Graphics + Explainer",
-    thumbnail: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=80",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-crypto-currency-and-stock-market-charts-41484-large.mp4",
-    duration: "0:55",
+    thumbnail: "/thumbnails/explaner_v9.jpg",
+    videoUrl: "/videos/explaner_v9.mp4",
+    duration: "0:28",
     result: "18% Inbound Lead Rate",
-    client: "AlphaFin Hedge Advisory"
+    client: "AlphaFin Advisory"
   },
   {
     id: 4,
-    title: "DTC Skincare Brand Viral Ad Hook",
-    category: "ecommerce",
-    categoryName: "E-commerce",
-    format: "High-Paced UGC Ad",
-    thumbnail: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop&q=80",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-applying-a-face-cream-in-close-up-41907-large.mp4",
-    duration: "0:30",
-    result: "4.1x ROAS on Meta Ads",
-    client: "Lumina Organic Skincare"
+    title: "Dubai Skyline Luxury Architectural Showcase",
+    category: "real-estate",
+    categoryName: "Real Estate",
+    format: "Ultra-Luxury Reel",
+    thumbnail: "/thumbnails/dubai-1.jpg",
+    videoUrl: "/videos/dubai-1.mp4",
+    duration: "0:37",
+    result: "1.2M+ Reach on Reels",
+    client: "Dubai Prime Estates"
   },
   {
     id: 5,
-    title: "Aesthetic Dental Smile Transformation",
-    category: "healthcare",
-    categoryName: "Healthcare",
-    format: "Before & After Case Reel",
-    thumbnail: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop&q=80",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-doctor-explaining-a-treatment-to-a-patient-42358-large.mp4",
-    duration: "0:38",
-    result: "85 High-Ticket Consultations",
-    client: "Dr. Sterling Aesthetic Clinic"
+    title: "Deep-Dive Podcast Masterclass Cut",
+    category: "education",
+    categoryName: "Education",
+    format: "Podcast Authority Short",
+    thumbnail: "/thumbnails/podcast-2.jpg",
+    videoUrl: "/videos/podcast-2.mp4",
+    duration: "1:06",
+    result: "14,000+ Course Signups",
+    client: "Mindshift Mastery Podcast"
   },
   {
     id: 6,
-    title: "High-Performance Habit Coaching Blueprint",
-    category: "education",
-    categoryName: "Education",
-    format: "Educational YouTube Short",
-    thumbnail: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&auto=format&fit=crop&q=80",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-young-man-sitting-in-a-coffee-shop-reading-a-book-42436-large.mp4",
-    duration: "0:52",
-    result: "14,000+ Course Signups",
-    client: "Mindshift Mastery Academy"
+    title: "GK Meadowlands Luxury Architectural Reel",
+    category: "real-estate",
+    categoryName: "Real Estate",
+    format: "Vertical Real Estate Cut",
+    thumbnail: "/thumbnails/gk-medowlands-reel.jpg",
+    videoUrl: "/videos/gk-medowlands-reel.mp4",
+    duration: "0:42",
+    result: "Private Buyer Secured in 14 Days",
+    client: "Meadowlands Luxury Estates"
   },
   {
     id: 7,
-    title: "Modern Minimalist Architectural Villa Tour",
-    category: "real-estate",
-    categoryName: "Real Estate",
-    format: "Cinematic Horizontal 4K Cut",
-    thumbnail: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&auto=format&fit=crop&q=80",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-modern-apartment-interior-living-room-41974-large.mp4",
-    duration: "1:45",
-    result: "Private Buyer Secured in 14 Days",
-    client: "Coastal Haven Properties"
-  },
-  {
-    id: 8,
-    title: "B2B SaaS Founder Vision Story",
+    title: "Founder Growth Playbook & Mindset Story",
     category: "personal-brand",
     categoryName: "Personal Brand",
     format: "LinkedIn Authority Video",
-    thumbnail: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-man-working-on-a-laptop-42999-large.mp4",
-    duration: "1:15",
+    thumbnail: "/thumbnails/gautam-reel-1.jpg",
+    videoUrl: "/videos/gautam-reel-1.mp4",
+    duration: "0:41",
     result: "1,200+ Founder Reshares",
-    client: "CloudScale Software"
+    client: "Gautam (Venture Partner)"
+  },
+  {
+    id: 8,
+    title: "Viral DTC E-commerce Performance Ad Hook",
+    category: "ecommerce",
+    categoryName: "E-commerce",
+    format: "High-Paced UGC Ad",
+    thumbnail: "/thumbnails/ad-18.jpg",
+    videoUrl: "/videos/ad-18.mp4",
+    duration: "0:45",
+    result: "4.1x ROAS on Meta Ads",
+    client: "Lumina Organics"
   },
   {
     id: 9,
-    title: "Fitness & Nutrition App Launch Ad",
+    title: "Cinematic Documentary Narrative & Visual Pacing",
+    category: "education",
+    categoryName: "Education",
+    format: "YouTube Documentary Cut",
+    thumbnail: "/thumbnails/documentary-video.jpg",
+    videoUrl: "/videos/documentary-video.mp4",
+    duration: "1:11",
+    result: "82% Retention Rate",
+    client: "Storyline Films"
+  },
+  {
+    id: 10,
+    title: "High-Yield Business Breakdown & Financial Wisdom",
+    category: "finance",
+    categoryName: "Finance",
+    format: "Viral Financial Short",
+    thumbnail: "/thumbnails/reel-4.jpg",
+    videoUrl: "/videos/reel-4.mp4",
+    duration: "0:38",
+    result: "310K Views",
+    client: "Capital Edge"
+  },
+  {
+    id: 11,
+    title: "Strategic Business Leadership & Market Vision",
+    category: "finance",
+    categoryName: "Finance",
+    format: "Authority Voiceover Master",
+    thumbnail: "/thumbnails/with-vocie.jpg",
+    videoUrl: "/videos/with-vocie.mp4",
+    duration: "1:12",
+    result: "240+ Inbound Enterprise Inquiries",
+    client: "Vance Global Capital"
+  },
+  {
+    id: 12,
+    title: "Personal Brand Authority & Creator Journey",
+    category: "personal-brand",
+    categoryName: "Personal Brand",
+    format: "Talking Head + Kinetic Captions",
+    thumbnail: "/thumbnails/avishya-1.jpg",
+    videoUrl: "/videos/avishya-1.mp4",
+    duration: "0:35",
+    result: "48K+ Shares across Meta",
+    client: "Avishya Media"
+  },
+  {
+    id: 13,
+    title: "Fitness Elevation & High-Energy UGC Hook",
     category: "ecommerce",
     categoryName: "E-commerce",
     format: "Fast-Paced Motion Ad",
-    thumbnail: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&auto=format&fit=crop&q=80",
-    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-applying-a-face-cream-in-close-up-41907-large.mp4",
-    duration: "0:25",
+    thumbnail: "/thumbnails/ins-elev-1.jpg",
+    videoUrl: "/videos/ins-elev-1.mp4",
+    duration: "0:42",
     result: "65,000+ App Installs",
-    client: "PulseFit Nutrition"
+    client: "Elevate Performance"
+  },
+  {
+    id: 14,
+    title: "Aesthetic Dental Smile Transformation Case",
+    category: "healthcare",
+    categoryName: "Healthcare",
+    format: "Before & After Reel",
+    thumbnail: "/thumbnails/3.jpg",
+    videoUrl: "/videos/3.mp4",
+    duration: "0:17",
+    result: "85 High-Ticket Consultations",
+    client: "Dr. Sterling Clinic"
+  },
+  {
+    id: 15,
+    title: "Healthcare Practitioner Authority & Patient Care",
+    category: "healthcare",
+    categoryName: "Healthcare",
+    format: "Medical Trust Reel",
+    thumbnail: "/thumbnails/5.jpg",
+    videoUrl: "/videos/5.mp4",
+    duration: "0:50",
+    result: "92 Qualified Patient Leads",
+    client: "Dr. Sterling Aesthetic"
   }
 ];
 
@@ -118,6 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
   createIcons({ icons: { Play, Check, ChevronDown, Plus, ArrowRight, Menu, X, Video, Star, Sparkles } });
 
   initThreeHero();
+  initHeroVideoSound();
   initFormatCardHighlight();
   initBeforeAfterSlider();
   initRoiCalculator();
@@ -489,6 +562,35 @@ function initVideoCarousel() {
   });
 }
 
+// 1.8. Hero Background Video Autoplay & Sound Toggle
+function initHeroVideoSound() {
+  const video = document.getElementById('hero-showreel-video');
+  const toggleBtn = document.getElementById('hero-sound-toggle-btn');
+  const icon = document.getElementById('hero-sound-icon');
+  const label = document.getElementById('hero-sound-label');
+
+  if (!video || !toggleBtn) return;
+
+  // Make sure video plays muted automatically on page load
+  video.muted = true;
+  video.play().catch(() => {});
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (video.muted) {
+      video.muted = false;
+      if (icon) icon.textContent = '🔊';
+      if (label) label.textContent = 'Mute';
+      toggleBtn.classList.add('border-brand-orange', 'text-brand-orange');
+    } else {
+      video.muted = true;
+      if (icon) icon.textContent = '🔇';
+      if (label) label.textContent = 'Unmute';
+      toggleBtn.classList.remove('border-brand-orange', 'text-brand-orange');
+    }
+  });
+}
+
 // 2. Interactive Video Modal Player
 function initVideoModal() {
   const modal = document.getElementById('video-modal');
@@ -503,6 +605,10 @@ function initVideoModal() {
     const item = portfolioData.find(v => v.id === id);
     if (!item) return;
 
+    // Pause hero background video so sound doesn't overlap
+    const heroVid = document.getElementById('hero-showreel-video');
+    if (heroVid) heroVid.pause();
+
     titleElem.textContent = item.title;
     subtitleElem.textContent = `${item.categoryName} • ${item.format} • ${item.client}`;
     videoElem.src = item.videoUrl;
@@ -516,6 +622,10 @@ function initVideoModal() {
     videoElem.src = '';
     modal.classList.add('hidden');
     modal.classList.remove('flex');
+
+    // Resume hero background video
+    const heroVid = document.getElementById('hero-showreel-video');
+    if (heroVid) heroVid.play().catch(() => {});
   }
 
   closeBtn.addEventListener('click', closeModal);
