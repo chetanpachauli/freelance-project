@@ -741,7 +741,7 @@ function initLeadForm() {
     ];
 
     const waText = encodeURIComponent(waLines.join('\n'));
-    const waUrl = `https://wa.me/918218102253?text=${waText}`;
+    const waUrl = `https://wa.me/916284915237?text=${waText}`;
 
     if (formFeedback) {
       formFeedback.innerHTML = `✓ <strong>Connecting to WhatsApp!</strong> If chat did not open automatically, <a href="${waUrl}" target="_blank" class="underline font-bold text-white hover:text-emerald-200">click here to send on WhatsApp ↗</a>`;
