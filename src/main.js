@@ -709,6 +709,7 @@ function initLeadForm() {
     const handleInput = document.getElementById('quote-handle');
     const formatSelect = document.getElementById('quote-format');
     const volumeSelect = document.getElementById('quote-volume');
+    const styleSelect = document.getElementById('quote-style');
 
     const name = nameInput ? nameInput.value.trim() : '';
     const email = emailInput ? emailInput.value.trim() : '';
@@ -716,6 +717,7 @@ function initLeadForm() {
     const handle = handleInput && handleInput.value.trim() ? handleInput.value.trim() : 'Not provided';
     const formatText = formatSelect && formatSelect.selectedIndex >= 0 ? formatSelect.options[formatSelect.selectedIndex].text : 'General Inquiry';
     const volumeText = volumeSelect && volumeSelect.selectedIndex >= 0 ? volumeSelect.options[volumeSelect.selectedIndex].text : 'Flexible';
+    const styleText = styleSelect && styleSelect.selectedIndex >= 0 ? styleSelect.options[styleSelect.selectedIndex].text : 'Not Specified';
 
     const btn = form.querySelector('button[type="submit"]');
     const originalText = btn.innerHTML;
@@ -730,9 +732,10 @@ function initLeadForm() {
       `👤 *Client Name:* ${name}`,
       `📧 *Email:* ${email}`,
       `🏢 *Company / Brand:* ${company}`,
-      `📱 *Instagram / Handle:* ${handle}`,
-      `🎬 *Editing Format:* ${formatText}`,
+      `📱 *Website/Handle:* ${handle}`,
+      `🎬 *Video Type:* ${formatText}`,
       `📦 *Monthly Volume:* ${volumeText}`,
+      `🎨 *Editing Style:* ${styleText}`,
       ``,
       `Looking forward to receiving the quote proposal!`
     ];

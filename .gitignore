@@ -3,6 +3,7 @@ dist/
 dist-ssr/
 *.local
 *.png
+!public/*.png
 *.cjs
 wealth_animations.json
 .DS_Store
