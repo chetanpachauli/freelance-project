@@ -32,7 +32,7 @@
       <nav class="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-300">
         <a href="#work" class="hover:text-brand-amber transition-colors">Portfolio</a>
         <a href="#formats" class="hover:text-brand-amber transition-colors">Formats</a>
-        <a href="#proof" class="hover:text-brand-amber transition-colors">Results</a>
+        <!-- <a href="#proof" class="hover:text-brand-amber transition-colors">Results</a> -->
         <a href="#problem" class="hover:text-brand-amber transition-colors">Why Us</a>
         <a href="#process" class="hover:text-brand-amber transition-colors">Workflow</a>
         <a href="#pricing" class="hover:text-brand-amber transition-colors">Pricing</a>
@@ -76,7 +76,7 @@
     <div class="flex flex-col gap-6 py-8 text-base font-bold text-slate-200 uppercase tracking-wider">
       <a href="#work" class="mobile-nav-link hover:text-brand-amber">Portfolio</a>
       <a href="#formats" class="mobile-nav-link hover:text-brand-amber">Formats & Services</a>
-      <a href="#proof" class="mobile-nav-link hover:text-brand-amber">Client Results</a>
+      <!-- <a href="#proof" class="mobile-nav-link hover:text-brand-amber">Client Results</a> -->
       <a href="#problem" class="mobile-nav-link hover:text-brand-amber">Why Choose Us</a>
       <a href="#process" class="mobile-nav-link hover:text-brand-amber">How It Works</a>
       <a href="#pricing" class="mobile-nav-link hover:text-brand-amber">Packages & Pricing</a>
@@ -96,16 +96,12 @@
       <canvas id="three-hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-60"></canvas>
       
       <div class="relative z-10">
-        <div class="inline-block mb-6 sm:mb-8 reveal-on-scroll stagger-1">
-        <a href="#contact" class="btn-wealth px-6 py-2.5 sm:px-8 sm:py-3 text-[11px] sm:text-xs uppercase tracking-widest font-black shadow-2xl animate-gentle-bounce">
-          Join Client Roster • Get Quote
-        </a>
-      </div>
+        
 
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 mb-6 reveal-on-scroll stagger-2">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 mb-6">
         <h1 class="text-3xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] sm:leading-[1.08]">
           Turn Your Raw Footage Into Content <br class="hidden sm:inline" />
-          <span class="text-gradient-gold text-shimmer" data-scramble="true">People Want to Watch.</span>
+          <span class="text-gradient-gold text-shimmer">People Want to Watch.</span>
         </h1>
         <p class="text-slate-300 text-sm sm:text-xl font-normal max-w-2xl mx-auto mt-4 sm:mt-6 leading-relaxed">
           Professional video editing for brands, creators and businesses — from short-form reels and social media content to ads, YouTube videos and more.
@@ -113,7 +109,7 @@
       </div>
 
       <!-- Hero Video Showcase Container -->
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 relative mt-8 sm:mt-12 mb-10 reveal-on-scroll stagger-3">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 relative mt-8 sm:mt-12 mb-10">
         <div class="relative wealth-card p-2 sm:p-5 border-white/10 shadow-2xl shadow-orange-950/40 bg-dark-900 group border-rotating-glow">
           <div class="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-black flex items-center justify-center">
             
@@ -369,163 +365,49 @@
       </div>
     </section>
 
-    <!-- SECTION: NETFLIX-STYLE "CONTINUE WATCHING" VIDEO SLIDER (Wealth Portal Exact Feature 00:05 - 00:09) -->
-    <section class="py-20 bg-dark-900/60 border-y border-white/5 relative">
+    <!-- SECTION 05: PORTFOLIO SHOWCASE (Interactive Grid & Filters) -->
+    <section id="work" class="py-24 bg-dark-900/60 border-t border-white/5 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div class="lg:col-span-7">
-            <div class="wealth-card p-5 sm:p-7 border-white/10 bg-dark-950">
-              
-              <div class="flex items-center justify-between pb-4 mb-5 border-b border-white/5">
-                <div>
-                  <span class="text-[11px] font-mono tracking-widest text-brand-orange uppercase block">Master Portfolio Vault</span>
-                  <span class="text-sm font-bold text-white uppercase tracking-wider">CONTINUE WATCHING • RECENT EDITS</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <button id="carousel-prev" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center text-xs transition-colors">◀</button>
-                  <button id="carousel-next" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center text-xs transition-colors">▶</button>
-                </div>
-              </div>
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll">
+          <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-3 block">Selected Works</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+            Don't Take Our Word For It. <br />
+            <span class="text-gradient-gold">Watch the Work.</span>
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Click on any video to launch the playback player. Experience our pacing, audio mastering, and typography.
+          </p>
+        </div>
 
-                            <!-- Continuous Auto-Sliding Video Track (Left to Right) -->
-              <div class="relative w-full overflow-hidden">
-                <div class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-dark-950 to-transparent z-10"></div>
-                <div class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-dark-950 to-transparent z-10"></div>
-
-                <div id="video-carousel-track" class="animate-carousel-slide gap-4">
-                <div onclick="openVideoModal(1)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
-                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&auto=format&fit=crop&q=80" alt="Penthouse Walkthrough" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
-                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
-                      <div class="h-full bg-brand-orange w-3/4"></div>
-                    </div>
-                  </div>
-                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Luxury Penthouse Walkthrough</h4>
-                  <span class="text-[10px] text-slate-400 font-mono">Real Estate • 420K Views</span>
-                </div>
-
-                <div onclick="openVideoModal(2)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
-                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=80" alt="Founder Breakdown" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
-                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
-                      <div class="h-full bg-brand-orange w-1/2"></div>
-                    </div>
-                  </div>
-                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">CEO Personal Brand Authority Reel</h4>
-                  <span class="text-[10px] text-slate-400 font-mono">Personal Brand • 3.2x Engagement</span>
-                </div>
-
-                <div onclick="openVideoModal(3)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
-                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
-                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop&q=80" alt="Finance Explainer" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
-                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
-                      <div class="h-full bg-brand-orange w-5/6"></div>
-                    </div>
-                  </div>
-                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Algorithmic Trading In 60 Seconds</h4>
-                  <span class="text-[10px] text-slate-400 font-mono">Finance • 18% Conversion</span>
-                </div>
-
-                <div onclick="openVideoModal(4)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
-                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
-                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=80" alt="Ecom UGC Ad" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
-                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
-                      <div class="h-full bg-brand-orange w-2/3"></div>
-                    </div>
-                  </div>
-                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">DTC Viral Skincare Meta Ad Hook</h4>
-                  <span class="text-[10px] text-slate-400 font-mono">E-commerce • 4.1x ROAS</span>
-                </div>
-                <div onclick="openVideoModal(1)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
-                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&auto=format&fit=crop&q=80" alt="Penthouse Walkthrough" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
-                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
-                      <div class="h-full bg-brand-orange w-3/4"></div>
-                    </div>
-                  </div>
-                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Luxury Penthouse Walkthrough</h4>
-                  <span class="text-[10px] text-slate-400 font-mono">Real Estate • 420K Views</span>
-                </div>
-
-                <div onclick="openVideoModal(2)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
-                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=80" alt="Founder Breakdown" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
-                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
-                      <div class="h-full bg-brand-orange w-1/2"></div>
-                    </div>
-                  </div>
-                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">CEO Personal Brand Authority Reel</h4>
-                  <span class="text-[10px] text-slate-400 font-mono">Personal Brand • 3.2x Engagement</span>
-                </div>
-
-                <div onclick="openVideoModal(3)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
-                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
-                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop&q=80" alt="Finance Explainer" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
-                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
-                      <div class="h-full bg-brand-orange w-5/6"></div>
-                    </div>
-                  </div>
-                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Algorithmic Trading In 60 Seconds</h4>
-                  <span class="text-[10px] text-slate-400 font-mono">Finance • 18% Conversion</span>
-                </div>
-
-                <div onclick="openVideoModal(4)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
-                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
-                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=80" alt="Ecom UGC Ad" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
-                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
-                      <div class="h-full bg-brand-orange w-2/3"></div>
-                    </div>
-                  </div>
-                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">DTC Viral Skincare Meta Ad Hook</h4>
-                  <span class="text-[10px] text-slate-400 font-mono">E-commerce • 4.1x ROAS</span>
-                </div>
-                </div>
-              </div></div>
-
-            </div>
+        <!-- Filter Tabs & Motion Mode Switcher -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 reveal-on-scroll stagger-1">
+          <!-- Filter Tabs (Pill Style) -->
+          <div class="flex items-center gap-2">
+            <button data-filter="all" class="portfolio-tab px-5 py-2 rounded-full text-xs font-bold transition-all bg-brand-orange text-black shadow-lg">
+              All
+            </button>
           </div>
 
-          <div class="lg:col-span-5">
-            <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-2 block">Insights To Accelerate Your Success</span>
-            <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-              Real Strategies. Clear Execution.
-            </h3>
-            <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              Learn directly from our post-production frameworks. We engineer every cut with sound design, kinetic text tracking, and psychological retention triggers that compel viewers to watch through to the CTA.
-            </p>
-            <div class="flex items-center gap-4">
-              <a href="#contact" class="btn-wealth px-7 py-3 text-xs uppercase tracking-wider font-extrabold">
-                Get Your Brand Cut →
-              </a>
-            </div>
+          <!-- Motion Mode Switcher: Up/Down Wall vs Left/Right Stream -->
+          <div class="inline-flex items-center p-1 rounded-full bg-dark-950 border border-white/10 text-xs shadow-inner">
+            <button id="portfolio-mode-wall" class="px-3.5 py-1.5 rounded-full font-bold bg-brand-orange text-black transition-all flex items-center gap-1.5">
+              <span>↕</span> Up & Down Wall
+            </button>
+            <button id="portfolio-mode-stream" class="px-3.5 py-1.5 rounded-full font-semibold text-slate-400 hover:text-white transition-all flex items-center gap-1.5">
+              <span>↔</span> Left & Right Flow
+            </button>
           </div>
+        </div>
 
+        <!-- Continuous Moving Video Showcase (Wealth Portal Style) -->
+        <div class="relative h-[680px] overflow-hidden rounded-2xl bg-dark-950/40 border border-white/5 p-4 sm:p-6 my-2 reveal-on-scroll stagger-2">
+          <!-- Top & Bottom Gradient Masks for Seamless Entry/Exit -->
+          <div class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0e] via-[#0a0a0e]/85 to-transparent z-20"></div>
+          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0e] via-[#0a0a0e]/85 to-transparent z-20"></div>
+
+          <!-- Container for Dynamic Motion Wall / Flow -->
+          <div id="portfolio-grid" class="h-full"></div>
         </div>
 
       </div>
@@ -692,67 +574,183 @@
 
       </div>
     </section>
-    <!-- SECTION 05: PORTFOLIO SHOWCASE (Interactive Grid & Filters) -->
-    <section id="work" class="py-24 bg-dark-900/60 border-t border-white/5 relative">
+
+    <!-- SECTION: NETFLIX-STYLE "CONTINUE WATCHING" VIDEO SLIDER (Wealth Portal Exact Feature 00:05 - 00:09) -->
+    <section class="py-20 bg-dark-900/60 border-y border-white/5 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll">
-          <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-3 block">Selected Works</span>
-          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
-            Don't Take Our Word For It. <br />
-            <span class="text-gradient-gold">Watch the Work.</span>
-          </h2>
-          <p class="text-slate-400 text-sm sm:text-base">
-            Click on any video to launch the playback player. Experience our pacing, audio mastering, and typography.
-          </p>
-        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7">
+            <div class="wealth-card p-5 sm:p-7 border-white/10 bg-dark-950">
+              
+              <div class="flex items-center justify-between pb-4 mb-5 border-b border-white/5">
+                <div>
+                  <span class="text-[11px] font-mono tracking-widest text-brand-orange uppercase block">Master Portfolio Vault</span>
+                  <span class="text-sm font-bold text-white uppercase tracking-wider">CONTINUE WATCHING • RECENT EDITS</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button id="carousel-prev" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center text-xs transition-colors">◀</button>
+                  <button id="carousel-next" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center text-xs transition-colors">▶</button>
+                </div>
+              </div>
 
-        <!-- Filter Tabs & Motion Mode Switcher -->
-        <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 reveal-on-scroll stagger-1">
-          <!-- Filter Tabs (Pill Style) -->
-          <div class="flex items-center gap-2">
-            <button data-filter="all" class="portfolio-tab px-5 py-2 rounded-full text-xs font-bold transition-all bg-brand-orange text-black shadow-lg">
-              All
-            </button>
+                            <!-- Continuous Auto-Sliding Video Track (Left to Right) -->
+              <div class="relative w-full overflow-hidden">
+                <div class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-dark-950 to-transparent z-10"></div>
+                <div class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-dark-950 to-transparent z-10"></div>
+
+                <div id="video-carousel-track" class="animate-carousel-slide gap-4">
+                <div onclick="openVideoModal(1)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&auto=format&fit=crop&q=80" alt="Penthouse Walkthrough" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-3/4"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Luxury Penthouse Walkthrough</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Real Estate • 420K Views</span>
+                </div>
+
+                <div onclick="openVideoModal(2)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=80" alt="Founder Breakdown" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-1/2"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">CEO Personal Brand Authority Reel</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Personal Brand • 3.2x Engagement</span>
+                </div>
+
+                <div onclick="openVideoModal(3)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop&q=80" alt="Finance Explainer" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-5/6"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Algorithmic Trading In 60 Seconds</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Finance • 18% Conversion</span>
+                </div>
+
+                <div onclick="openVideoModal(4)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=80" alt="Ecom UGC Ad" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-2/3"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">DTC Viral Skincare Meta Ad Hook</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">E-commerce • 4.1x ROAS</span>
+                </div>
+                <div onclick="openVideoModal(1)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&auto=format&fit=crop&q=80" alt="Penthouse Walkthrough" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-3/4"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Luxury Penthouse Walkthrough</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Real Estate • 420K Views</span>
+                </div>
+
+                <div onclick="openVideoModal(2)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=80" alt="Founder Breakdown" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-1/2"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">CEO Personal Brand Authority Reel</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Personal Brand • 3.2x Engagement</span>
+                </div>
+
+                <div onclick="openVideoModal(3)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop&q=80" alt="Finance Explainer" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-5/6"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">Algorithmic Trading In 60 Seconds</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">Finance • 18% Conversion</span>
+                </div>
+
+                <div onclick="openVideoModal(4)" class="w-60 sm:w-64 flex-shrink-0 group cursor-pointer">
+                  <div class="aspect-video rounded-xl overflow-hidden relative bg-dark-850 mb-2.5">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=80" alt="Ecom UGC Ad" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="w-10 h-10 rounded-full bg-brand-orange text-black flex items-center justify-center font-bold">▶</div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-white/20">
+                      <div class="h-full bg-brand-orange w-2/3"></div>
+                    </div>
+                  </div>
+                  <h4 class="text-xs font-bold text-white group-hover:text-brand-amber transition-colors line-clamp-1">DTC Viral Skincare Meta Ad Hook</h4>
+                  <span class="text-[10px] text-slate-400 font-mono">E-commerce • 4.1x ROAS</span>
+                </div>
+                </div>
+              </div></div>
+
+            </div>
           </div>
 
-          <!-- Motion Mode Switcher: Up/Down Wall vs Left/Right Stream -->
-          <div class="inline-flex items-center p-1 rounded-full bg-dark-950 border border-white/10 text-xs shadow-inner">
-            <button id="portfolio-mode-wall" class="px-3.5 py-1.5 rounded-full font-bold bg-brand-orange text-black transition-all flex items-center gap-1.5">
-              <span>↕</span> Up & Down Wall
-            </button>
-            <button id="portfolio-mode-stream" class="px-3.5 py-1.5 rounded-full font-semibold text-slate-400 hover:text-white transition-all flex items-center gap-1.5">
-              <span>↔</span> Left & Right Flow
-            </button>
+          <div class="lg:col-span-5">
+            <span class="text-xs uppercase font-mono tracking-widest text-brand-orange mb-2 block">Insights To Accelerate Your Success</span>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+              Real Strategies. Clear Execution.
+            </h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Learn directly from our post-production frameworks. We engineer every cut with sound design, kinetic text tracking, and psychological retention triggers that compel viewers to watch through to the CTA.
+            </p>
+            <div class="flex items-center gap-4">
+              <a href="#contact" class="btn-wealth px-7 py-3 text-xs uppercase tracking-wider font-extrabold">
+                Get Your Brand Cut →
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Continuous Moving Video Showcase (Wealth Portal Style) -->
-        <div class="relative h-[680px] overflow-hidden rounded-2xl bg-dark-950/40 border border-white/5 p-4 sm:p-6 my-2 reveal-on-scroll stagger-2">
-          <!-- Top & Bottom Gradient Masks for Seamless Entry/Exit -->
-          <div class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0e] via-[#0a0a0e]/85 to-transparent z-20"></div>
-          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0e] via-[#0a0a0e]/85 to-transparent z-20"></div>
-
-          <!-- Container for Dynamic Motion Wall / Flow -->
-          <div id="portfolio-grid" class="h-full"></div>
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION: DISCORD / SLACK WORKSPACE CHAT MOCKUP (Wealth Portal Exact Feature 00:19 - 00:22) -->
+    <!-- ==================== COMMENTED OUT: DISCORD / SLACK WORKSPACE CHAT MOCKUP ====================
+<!- - SECTION: DISCORD / SLACK WORKSPACE CHAT MOCKUP (Wealth Portal Exact Feature 00:19 - 00:22) - ->
     <section class="hidden lg:block py-24 relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <!-- Discord / Slack Workspace UI (The Wealth Portal Style with Live Typing & Send Animation) -->
+          <!- - Discord / Slack Workspace UI (The Wealth Portal Style with Live Typing & Send Animation) - ->
           <div class="lg:col-span-8">
             <div class="discord-ui shadow-2xl border border-white/10 bg-[#0c0d12] rounded-2xl overflow-hidden flex flex-col md:flex-row h-[560px]">
               
-              <!-- Left Sidebar: Channels & Navigation (Matching media_1790958197401.png) -->
+              <!- - Left Sidebar: Channels & Navigation (Matching media_1790958197401.png) - ->
               <div class="hidden sm:flex flex-col w-52 bg-[#090a0e] border-r border-white/5 p-4 select-none flex-shrink-0">
-                <!-- Branding Header -->
+                <!- - Branding Header - ->
                 <div class="flex items-center gap-2.5 pb-4 mb-3 border-b border-white/5">
                   <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-amber to-brand-orange flex items-center justify-center text-black font-black text-xs shadow-md">MT</div>
                   <div class="flex flex-col">
@@ -761,7 +759,7 @@
                   </div>
                 </div>
 
-                <!-- Channels List -->
+                <!- - Channels List - ->
                 <div class="space-y-4 overflow-y-auto no-scrollbar text-xs">
                   <div>
                     <span class="text-[10px] uppercase font-mono tracking-widest text-slate-500 font-bold block mb-1.5">Operations</span>
@@ -803,7 +801,7 @@
                   </div>
                 </div>
 
-                <!-- User Footer -->
+                <!- - User Footer - ->
                 <div class="mt-auto pt-3 border-t border-white/5 flex items-center gap-2">
                   <div class="w-7 h-7 rounded-full bg-slate-800 border border-white/20 flex items-center justify-center text-[10px] text-white font-bold">VIP</div>
                   <div class="flex flex-col">
@@ -813,10 +811,10 @@
                 </div>
               </div>
 
-              <!-- Right Area: Chat Feed & Live Interactive Typing Input -->
+              <!- - Right Area: Chat Feed & Live Interactive Typing Input - ->
               <div class="flex-1 flex flex-col justify-between bg-[#0F1015] p-3 sm:p-5">
                 
-                <!-- Chat Window Top Bar -->
+                <!- - Chat Window Top Bar - ->
                 <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/5 text-xs text-slate-400">
                   <div class="flex items-center gap-2">
                     <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
@@ -832,10 +830,10 @@
                   </span>
                 </div>
 
-                <!-- Message Feed (Scrollable) -->
+                <!- - Message Feed (Scrollable) - ->
                 <div id="chat-message-feed" class="flex-1 overflow-y-auto no-scrollbar pr-1 mb-3 space-y-3.5 max-h-[380px]">
                   
-                  <!-- Static Initial Message 1 -->
+                  <!- - Static Initial Message 1 - ->
                   <div class="flex items-start gap-3">
                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Marcus" class="w-8 h-8 rounded-full object-cover border border-brand-orange/40 flex-shrink-0" />
                     <div class="bg-white/5 p-3 rounded-xl rounded-tl-none border border-white/5 w-full">
@@ -849,7 +847,7 @@
                     </div>
                   </div>
 
-                  <!-- Static Initial Message 2 -->
+                  <!- - Static Initial Message 2 - ->
                   <div class="flex items-start gap-3">
                     <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand-amber to-brand-orange flex items-center justify-center text-black font-black text-xs flex-shrink-0 shadow-md">
                       MT
@@ -865,7 +863,7 @@
                     </div>
                   </div>
 
-                  <!-- Static Initial Message 3 -->
+                  <!- - Static Initial Message 3 - ->
                   <div class="flex items-start gap-3">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Julian" class="w-8 h-8 rounded-full object-cover border border-white/20 flex-shrink-0" />
                     <div class="bg-white/5 p-3 rounded-xl rounded-tl-none border border-white/5 w-full">
@@ -881,7 +879,7 @@
 
                 </div>
 
-                <!-- Typing Indicator Bubble -->
+                <!- - Typing Indicator Bubble - ->
                 <div id="chat-typing-indicator" class="hidden flex items-center gap-2 px-3 py-1.5 mb-2 text-[11px] font-mono text-brand-amber bg-brand-orange/10 rounded-lg border border-brand-orange/20 w-fit">
                   <div class="flex items-center gap-1">
                     <span class="typing-dot"></span>
@@ -891,7 +889,7 @@
                   <span>Marketing Talk Producer is typing...</span>
                 </div>
 
-                <!-- Interactive Chat Input Bar with Typewriter Simulation & Glowing Send Button -->
+                <!- - Interactive Chat Input Bar with Typewriter Simulation & Glowing Send Button - ->
                 <div class="mt-auto pt-2">
                   <div class="bg-[#141620] rounded-full p-1.5 sm:p-2 pl-3.5 sm:pl-5 border border-white/10 flex items-center justify-between focus-within:border-brand-amber/60 transition-all shadow-xl min-w-0">
                     <input 
@@ -943,8 +941,10 @@
 
       </div>
     </section>
+==================== END OF COMMENTED OUT: DISCORD / SLACK WORKSPACE CHAT MOCKUP ==================== -->
 
-    <!-- SECTION: PROOF WALL / RESULTS SHOWCASE (Wealth Portal Exact Feature 00:40 - 00:44) -->
+    <!-- ==================== COMMENTED OUT: PROOF WALL / RESULTS SHOWCASE ====================
+<!- - SECTION: PROOF WALL / RESULTS SHOWCASE (Wealth Portal Exact Feature 00:40 - 00:44) - ->
     <section id="proof" class="hidden lg:block py-24 bg-dark-900/60 border-t border-white/5 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
@@ -958,20 +958,20 @@
           </p>
         </div>
 
-        <!-- Infinite Multi-Column Vertical Scrolling Proof Wall (The Wealth Portal Style) -->
+        <!- - Infinite Multi-Column Vertical Scrolling Proof Wall (The Wealth Portal Style) - ->
         <div class="relative h-[660px] overflow-hidden my-4 rounded-2xl bg-dark-950/40 border border-white/5 p-4 sm:p-6 reveal-on-scroll stagger-1">
           
-          <!-- Top & Bottom Gradient Masks for Seamless Entry/Exit -->
+          <!- - Top & Bottom Gradient Masks for Seamless Entry/Exit - ->
           <div class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0e] via-[#0a0a0e]/85 to-transparent z-20"></div>
           <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0e] via-[#0a0a0e]/85 to-transparent z-20"></div>
 
-          <!-- 3-Column Scrolling Wall Grid -->
+          <!- - 3-Column Scrolling Wall Grid - ->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left h-full">
             
-            <!-- COLUMN 1: Scrolling UP -->
+            <!- - COLUMN 1: Scrolling UP - ->
             <div class="overflow-hidden relative h-full">
               <div class="animate-scroll-col-up flex flex-col gap-6">
-                <!-- CARD 1.1: Discord Deal Post -->
+                <!- - CARD 1.1: Discord Deal Post - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pb-3 mb-3 border-b border-white/5">
                     <span class="flex items-center gap-1.5 text-brand-orange font-bold">
@@ -1000,7 +1000,7 @@
                   </div>
                 </div>
 
-                <!-- CARD 1.2: Real Estate Viral Views -->
+                <!- - CARD 1.2: Real Estate Viral Views - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center justify-between mb-3">
                     <span class="text-xs font-mono text-brand-orange">Instagram Reels</span>
@@ -1013,7 +1013,7 @@
                   </div>
                 </div>
 
-                <!-- CARD 1.3: Stripe Payout Notification -->
+                <!- - CARD 1.3: Stripe Payout Notification - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
                     <span class="flex items-center gap-1.5 font-bold text-emerald-400 font-mono">
@@ -1028,7 +1028,7 @@
                   <p class="text-xs text-slate-400">Monthly Video Retainer • B2B SaaS Authority Series (8 Long-form Delivered)</p>
                 </div>
 
-                <!-- CARD 1.4: Creator Review -->
+                <!- - CARD 1.4: Creator Review - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center gap-2.5 mb-2.5">
                     <div class="w-7 h-7 rounded-full bg-slate-700 flex items-center justify-center text-[11px] font-black text-white">AH</div>
@@ -1043,7 +1043,7 @@
                   <div class="text-[11px] text-brand-amber font-mono font-semibold">★ ★ ★ ★ ★ Verified Client</div>
                 </div>
 
-                <!-- DUPLICATE OF COLUMN 1 FOR SEAMLESS 100% LOOP -->
+                <!- - DUPLICATE OF COLUMN 1 FOR SEAMLESS 100% LOOP - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pb-3 mb-3 border-b border-white/5">
                     <span class="flex items-center gap-1.5 text-brand-orange font-bold">
@@ -1114,10 +1114,10 @@
               </div>
             </div>
 
-            <!-- COLUMN 2: Scrolling DOWN -->
+            <!- - COLUMN 2: Scrolling DOWN - ->
             <div class="hidden md:block overflow-hidden relative h-full">
               <div class="animate-scroll-col-down flex flex-col gap-6">
-                <!-- CARD 2.1: Meta & TikTok Ads 4.1x ROAS (Glowing Border) -->
+                <!- - CARD 2.1: Meta & TikTok Ads 4.1x ROAS (Glowing Border) - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-brand-orange/50 wealth-card-active shadow-xl">
                   <div class="flex items-center justify-between mb-3">
                     <span class="text-xs font-mono text-brand-amber">Meta & TikTok Paid Ads</span>
@@ -1130,7 +1130,7 @@
                   </div>
                 </div>
 
-                <!-- CARD 2.2: Sales / View Growth Graph Mockup -->
+                <!- - CARD 2.2: Sales / View Growth Graph Mockup - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center gap-2 mb-2">
                     <div class="w-6 h-6 rounded-md bg-purple-600/30 flex items-center justify-center text-[10px] text-purple-300 font-bold">JK</div>
@@ -1145,7 +1145,7 @@
                       <span>30-Day Channel Reach</span>
                       <span class="text-emerald-400 font-bold">+340%</span>
                     </div>
-                    <!-- Mini SVG Line Chart -->
+                    <!- - Mini SVG Line Chart - ->
                     <svg class="w-full h-12 text-brand-orange" viewBox="0 0 100 30" fill="none">
                       <path d="M 0 25 Q 20 22 40 18 T 70 8 T 100 2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
                       <path d="M 0 25 Q 20 22 40 18 T 70 8 T 100 2 L 100 30 L 0 30 Z" fill="currentColor" fill-opacity="0.1"/>
@@ -1157,7 +1157,7 @@
                   </div>
                 </div>
 
-                <!-- CARD 2.3: Mobile Revenue Screenshot Mockup -->
+                <!- - CARD 2.3: Mobile Revenue Screenshot Mockup - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center gap-2 mb-2">
                     <div class="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-[10px] text-slate-300 font-bold">NY</div>
@@ -1178,7 +1178,7 @@
                   </div>
                 </div>
 
-                <!-- CARD 2.4: Fintech CEO Thought Leadership -->
+                <!- - CARD 2.4: Fintech CEO Thought Leadership - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center justify-between mb-3">
                     <span class="text-xs font-mono text-brand-orange">Personal Brand</span>
@@ -1191,7 +1191,7 @@
                   </div>
                 </div>
 
-                <!-- DUPLICATE OF COLUMN 2 FOR SEAMLESS 100% LOOP -->
+                <!- - DUPLICATE OF COLUMN 2 FOR SEAMLESS 100% LOOP - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-brand-orange/50 wealth-card-active shadow-xl">
                   <div class="flex items-center justify-between mb-3">
                     <span class="text-xs font-mono text-brand-amber">Meta & TikTok Paid Ads</span>
@@ -1263,10 +1263,10 @@
               </div>
             </div>
 
-            <!-- COLUMN 3: Scrolling UP (Hidden on small mobile, visible on lg) -->
+            <!- - COLUMN 3: Scrolling UP (Hidden on small mobile, visible on lg) - ->
             <div class="hidden lg:block overflow-hidden relative h-full">
               <div class="animate-scroll-col-up flex flex-col gap-6" style="animation-duration: 26s !important;">
-                <!-- CARD 3.1: YouTube Shorts 65K Installs -->
+                <!- - CARD 3.1: YouTube Shorts 65K Installs - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center justify-between mb-3">
                     <span class="text-xs font-mono text-brand-orange">YouTube Shorts</span>
@@ -1279,7 +1279,7 @@
                   </div>
                 </div>
 
-                <!-- CARD 3.2: Discord Review Post -->
+                <!- - CARD 3.2: Discord Review Post - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pb-3 mb-3 border-b border-white/5">
                     <span class="flex items-center gap-1.5 text-brand-orange font-bold">
@@ -1300,7 +1300,7 @@
                   </div>
                 </div>
 
-                <!-- CARD 3.3: Course Creator Case Card -->
+                <!- - CARD 3.3: Course Creator Case Card - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center justify-between mb-3">
                     <span class="text-xs font-mono text-brand-orange">Course Creator</span>
@@ -1313,7 +1313,7 @@
                   </div>
                 </div>
 
-                <!-- CARD 3.4: Clinic Transformation Case Reel -->
+                <!- - CARD 3.4: Clinic Transformation Case Reel - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center justify-between mb-3">
                     <span class="text-xs font-mono text-brand-orange">Medical Aesthetic</span>
@@ -1326,7 +1326,7 @@
                   </div>
                 </div>
 
-                <!-- DUPLICATE OF COLUMN 3 FOR SEAMLESS 100% LOOP -->
+                <!- - DUPLICATE OF COLUMN 3 FOR SEAMLESS 100% LOOP - ->
                 <div class="wealth-card p-5 bg-[#0d0e14] border-white/10 hover:border-brand-amber/40 transition-all shadow-lg">
                   <div class="flex items-center justify-between mb-3">
                     <span class="text-xs font-mono text-brand-orange">YouTube Shorts</span>
@@ -1394,6 +1394,7 @@
 
       </div>
     </section>
+==================== END OF COMMENTED OUT: PROOF WALL / RESULTS SHOWCASE ==================== -->
 
 
     <!-- SECTION 09: WORKFLOW TIMELINE -->
@@ -2497,9 +2498,9 @@
     <a href="#work" class="side-nav-dot" data-section="work" aria-label="Portfolio Work">
       <span class="side-nav-tooltip">Portfolio</span>
     </a>
-    <a href="#proof" class="side-nav-dot" data-section="proof" aria-label="Client Proof & Stats">
+    <!-- <a href="#proof" class="side-nav-dot" data-section="proof" aria-label="Client Proof & Stats">
       <span class="side-nav-tooltip">Proof</span>
-    </a>
+    </a> -->
 
     <a href="#process" class="side-nav-dot" data-section="process" aria-label="4-Step Process">
       <span class="side-nav-tooltip">Workflow</span>

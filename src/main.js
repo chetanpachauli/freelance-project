@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStudioTimeline();
   init3DTiltCards();
   initAudioVisualizer();
-  initTextScramble();
+  // initTextScramble(); // Disabled to ensure crisp immediate text rendering
 });
 
 // 0.5. Format Cards Glowing Border Beam Sequential Highlight
@@ -424,9 +424,8 @@ function initPortfolio() {
         </div>
 
         <div>
-          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1.5 font-mono">
+          <div class="text-[11px] text-slate-400 mb-1.5 font-mono">
             <span>${item.format}</span>
-            <span class="text-emerald-400 font-bold">${item.result}</span>
           </div>
           <h3 class="font-bold text-white text-sm group-hover:text-brand-amber transition-colors line-clamp-1 mb-1">
             ${item.title}
