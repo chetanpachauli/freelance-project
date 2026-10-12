@@ -203,6 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initLeadForm();
   initScrollEffects();
+  initMobileTestimonialsCarousel();
   initUrlParamTracking();
   initLiveDiscordChat();
   initScrollReveal();
@@ -1419,3 +1420,63 @@ function initTextScramble() {
   elements.forEach(el => observer.observe(el));
 }
 
+
+
+// 18. Mobile Native Testimonials Carousel Controller
+function initMobileTestimonialsCarousel() {
+  const track = document.getElementById('mobile-reviews-track');
+  const prevBtn = document.getElementById('mobile-review-prev');
+  const nextBtn = document.getElementById('mobile-review-next');
+  const counter = document.getElementById('mobile-review-counter');
+  const dotsContainer = document.getElementById('mobile-review-dots');
+
+  if (!track || !dotsContainer) return;
+
+  const cards = track.children;
+  const total = cards.length;
+  const dots = dotsContainer.children;
+  let currentIndex = 0;
+
+  function updateDots(idx) {
+    currentIndex = idx;
+    if (counter) counter.textContent = `${idx + 1} / ${total}`;
+    Array.from(dots).forEach((dot, i) => {
+      if (i === idx) {
+        dot.className = 'w-2.5 h-2.5 rounded-full bg-brand-orange transition-all duration-300';
+      } else {
+        dot.className = 'w-1.5 h-1.5 rounded-full bg-white/20 transition-all duration-300';
+      }
+    });
+  }
+
+  function scrollToIndex(idx) {
+    if (idx < 0) idx = total - 1;
+    if (idx >= total) idx = 0;
+    const targetCard = cards[idx];
+    if (targetCard) {
+      targetCard.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      updateDots(idx);
+    }
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => scrollToIndex(currentIndex - 1));
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => scrollToIndex(currentIndex + 1));
+  }
+
+  // Update on manual touch scroll
+  let scrollTimeout;
+  track.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const scrollLeft = track.scrollLeft;
+      const cardWidth = cards[0] ? cards[0].offsetWidth + 16 : 300;
+      const newIdx = Math.round(scrollLeft / cardWidth);
+      if (newIdx >= 0 && newIdx < total) {
+        updateDots(newIdx);
+      }
+    }, 60);
+  }, { passive: true });
+}
